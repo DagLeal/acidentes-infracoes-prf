@@ -1,0 +1,3500 @@
+{
+  "schema_version": 1,
+  "ingestions": [
+    {
+      "arquivo": "acidentes2026.csv",
+      "sha256": "f8b8a9b0b53f538ae434f55c82bb542ff2b63e502782b19617d3c704a7a05c31",
+      "bytes": 55731575,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261115T223124Z",
+      "linhas_lidas": 148868,
+      "linhas_por_tabela": {
+        "pessoas": 148868
+      },
+      "periodos": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_zero_(sem_veiculo)_anulado": 13282,
+        "ajuste:id_em_notacao_cientifica_convertido": 2,
+        "ajuste:idade_acima_de_110_anulada": 42,
+        "ajuste:idade_sentinela_zero_anulada": 8793,
+        "ajuste:linha_de_veiculo_sem_pessoa": 13082
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2026_todas_causas_tipos.csv",
+      "sha256": "3a679ca4d561c6b376c03c3a2c9afc5ad59be9c37535e71132f34cde440c88fb",
+      "bytes": 174601291,
+      "tipo": "causas_tipos",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261115T223133Z",
+      "linhas_lidas": 457622,
+      "linhas_por_tabela": {
+        "causas": 82026,
+        "tipos": 95487
+      },
+      "periodos": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09"
+      ],
+      "tratamentos": {
+        "ajuste:id_em_notacao_cientifica_convertido": 16
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2026.csv",
+      "sha256": "8ea69b891ff7126b3370a850992144ea16fcdd4029f6ecbe5d4e5b068a65695a",
+      "bytes": 15992292,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261115T223136Z",
+      "linhas_lidas": 54895,
+      "linhas_por_tabela": {
+        "ocorrencias": 54895
+      },
+      "periodos": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 114,
+        "ajuste:classificacao_derivada_das_contagens": 1,
+        "ajuste:id_em_notacao_cientifica_convertido": 1
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2026_07.csv",
+      "sha256": "c0763f9507bee1c76456065052afe1d04723abf962c3953d3ca154ece85d8357",
+      "bytes": 189756830,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261115T223214Z",
+      "linhas_lidas": 785121,
+      "linhas_por_tabela": {
+        "infracoes": 785121
+      },
+      "periodos": [
+        "2026-07"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 785121
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "abr.csv",
+      "sha256": "68ade9b374320e89c6596c90f2fbbc9bdf1c10528d7ca6ccd707140a0c0c3f06",
+      "bytes": 145776202,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T140408Z",
+      "linhas_lidas": 659514,
+      "linhas_por_tabela": {
+        "infracoes": 659514
+      },
+      "periodos": [
+        "2017-04"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 656880,
+        "info:chave_sintetica_do_auto_(layout_antigo)": 659514
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2009.csv",
+      "sha256": "6286fe75fdd40b791d11dc46e090d1a1a7d2581620d24e3c4a3aa6dcc2514c72",
+      "bytes": 111616806,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T140423Z",
+      "linhas_lidas": 337143,
+      "linhas_por_tabela": {
+        "pessoas": 337142
+      },
+      "periodos": [
+        "2009-01",
+        "2009-02",
+        "2009-03",
+        "2009-04",
+        "2009-05",
+        "2009-06",
+        "2009-07",
+        "2009-08",
+        "2009-09",
+        "2009-10",
+        "2009-11",
+        "2009-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_invalido_anulado": 11,
+        "ajuste:idade_acima_de_110_anulada": 5,
+        "descartado:linha_duplicada": 1
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2010.csv",
+      "sha256": "df2e850ff7cf5a705c122e344e6554720902777d39a8d043fc50bae9fb4ab7d9",
+      "bytes": 131161192,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T140438Z",
+      "linhas_lidas": 395411,
+      "linhas_por_tabela": {
+        "pessoas": 395402
+      },
+      "periodos": [
+        "2010-01",
+        "2010-02",
+        "2010-03",
+        "2010-04",
+        "2010-05",
+        "2010-06",
+        "2010-07",
+        "2010-08",
+        "2010-09",
+        "2010-10",
+        "2010-11",
+        "2010-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_invalido_anulado": 21,
+        "ajuste:idade_acima_de_110_anulada": 5,
+        "descartado:linha_duplicada": 9
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2011.csv",
+      "sha256": "af56b220e962b6908b38358dad13bda074fa6e24b6ec814872079efd6cb272f9",
+      "bytes": 136582250,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T140454Z",
+      "linhas_lidas": 412289,
+      "linhas_por_tabela": {
+        "pessoas": 412278
+      },
+      "periodos": [
+        "2011-01",
+        "2011-02",
+        "2011-03",
+        "2011-04",
+        "2011-05",
+        "2011-06",
+        "2011-07",
+        "2011-08",
+        "2011-09",
+        "2011-10",
+        "2011-11",
+        "2011-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_invalido_anulado": 18,
+        "ajuste:idade_acima_de_110_anulada": 11,
+        "descartado:linha_duplicada": 11
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2012.csv",
+      "sha256": "0932cb211b56e4df6a9ed9ddf882eec7f189827bb1e31aa4363459fb82a26241",
+      "bytes": 133298786,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T140509Z",
+      "linhas_lidas": 396916,
+      "linhas_por_tabela": {
+        "pessoas": 396906
+      },
+      "periodos": [
+        "2012-01",
+        "2012-02",
+        "2012-03",
+        "2012-04",
+        "2012-05",
+        "2012-06",
+        "2012-07",
+        "2012-08",
+        "2012-09",
+        "2012-10",
+        "2012-11",
+        "2012-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_invalido_anulado": 38,
+        "ajuste:idade_acima_de_110_anulada": 13,
+        "descartado:linha_duplicada": 10
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2013.csv",
+      "sha256": "c15ae7989ab7b16fb2eca12a2633da025e761c5b0139f3b50870f87e72176777",
+      "bytes": 135328288,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T140525Z",
+      "linhas_lidas": 405820,
+      "linhas_por_tabela": {
+        "pessoas": 405813
+      },
+      "periodos": [
+        "2013-01",
+        "2013-02",
+        "2013-03",
+        "2013-04",
+        "2013-05",
+        "2013-06",
+        "2013-07",
+        "2013-08",
+        "2013-09",
+        "2013-10",
+        "2013-11",
+        "2013-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_invalido_anulado": 36,
+        "ajuste:idade_acima_de_110_anulada": 11,
+        "descartado:linha_duplicada": 7
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2014.csv",
+      "sha256": "161b1c7ae65e553ba28c67d3624dbada7aa964bce3e3d345e60706355da58b54",
+      "bytes": 123102968,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T140540Z",
+      "linhas_lidas": 368506,
+      "linhas_por_tabela": {
+        "pessoas": 368499
+      },
+      "periodos": [
+        "2014-01",
+        "2014-02",
+        "2014-03",
+        "2014-04",
+        "2014-05",
+        "2014-06",
+        "2014-07",
+        "2014-08",
+        "2014-09",
+        "2014-10",
+        "2014-11",
+        "2014-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_invalido_anulado": 47,
+        "ajuste:idade_acima_de_110_anulada": 14,
+        "descartado:linha_duplicada": 7
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2015.csv",
+      "sha256": "b4770f4bb2544ce447344800f87ceba3c4ac904748b1ce9f3e7d429961ad287c",
+      "bytes": 89995607,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T140551Z",
+      "linhas_lidas": 269052,
+      "linhas_por_tabela": {
+        "pessoas": 269046
+      },
+      "periodos": [
+        "2015-01",
+        "2015-02",
+        "2015-03",
+        "2015-04",
+        "2015-05",
+        "2015-06",
+        "2015-07",
+        "2015-08",
+        "2015-09",
+        "2015-10",
+        "2015-11",
+        "2015-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_invalido_anulado": 24,
+        "ajuste:idade_acima_de_110_anulada": 11,
+        "descartado:linha_duplicada": 6
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2016_atual.csv",
+      "sha256": "9585cf3b785aec853e04e842ef08790b074af877d4fedbde3d2bf7408b46fc2a",
+      "bytes": 62231038,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140558Z",
+      "linhas_lidas": 216261,
+      "linhas_por_tabela": {
+        "pessoas": 216258
+      },
+      "periodos": [
+        "sem-data"
+      ],
+      "tratamentos": {
+        "ajuste:data_invalida_ou_ausente": 216261,
+        "ajuste:idade_acima_de_110_anulada": 10,
+        "descartado:linha_duplicada": 3
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2017.csv",
+      "sha256": "9f133ea374e661fe2592cc7c9e86fc1d7e14a68d9ffe77c6c04bb37beee71451",
+      "bytes": 79946484,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140607Z",
+      "linhas_lidas": 224237,
+      "linhas_por_tabela": {
+        "pessoas": 224237
+      },
+      "periodos": [
+        "2017-01",
+        "2017-02",
+        "2017-03",
+        "2017-04",
+        "2017-05",
+        "2017-06",
+        "2017-07",
+        "2017-08",
+        "2017-09",
+        "2017-10",
+        "2017-11",
+        "2017-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_zero_(sem_veiculo)_anulado": 16927,
+        "ajuste:idade_acima_de_110_anulada": 820,
+        "ajuste:idade_sentinela_zero_anulada": 10530,
+        "ajuste:linha_de_veiculo_sem_pessoa": 19833
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2017_todas_causas_tipos.csv",
+      "sha256": "ebc393a4919e715b3be9eb26a224a782e8d8d82d6820693823f4a7b9038e2b39",
+      "bytes": 124909840,
+      "tipo": "causas_tipos",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140618Z",
+      "linhas_lidas": 342497,
+      "linhas_por_tabela": {
+        "causas": 100195,
+        "tipos": 111393
+      },
+      "periodos": [
+        "2017-01",
+        "2017-02",
+        "2017-03",
+        "2017-04",
+        "2017-05",
+        "2017-06",
+        "2017-07",
+        "2017-08",
+        "2017-09",
+        "2017-10",
+        "2017-11",
+        "2017-12"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2018.csv",
+      "sha256": "de2e1fc647caa375278a587dd5c00c1488aa8c77ed896fbe85d372c71abe8cc7",
+      "bytes": 65012343,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140625Z",
+      "linhas_lidas": 180061,
+      "linhas_por_tabela": {
+        "pessoas": 180061
+      },
+      "periodos": [
+        "2018-01",
+        "2018-02",
+        "2018-03",
+        "2018-04",
+        "2018-05",
+        "2018-06",
+        "2018-07",
+        "2018-08",
+        "2018-09",
+        "2018-10",
+        "2018-11",
+        "2018-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_zero_(sem_veiculo)_anulado": 15326,
+        "ajuste:id_em_notacao_cientifica_convertido": 1,
+        "ajuste:idade_acima_de_110_anulada": 373,
+        "ajuste:idade_sentinela_zero_anulada": 9018,
+        "ajuste:linha_de_veiculo_sem_pessoa": 15172
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2018_todas_causas_tipos.csv",
+      "sha256": "ad5401fd04e950f6115bedd17fe0c8b448a3a69ca115aeba7b197288689008ad",
+      "bytes": 117269111,
+      "tipo": "causas_tipos",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140635Z",
+      "linhas_lidas": 316638,
+      "linhas_por_tabela": {
+        "causas": 81549,
+        "tipos": 93299
+      },
+      "periodos": [
+        "2018-01",
+        "2018-02",
+        "2018-03",
+        "2018-04",
+        "2018-05",
+        "2018-06",
+        "2018-07",
+        "2018-08",
+        "2018-09",
+        "2018-10",
+        "2018-11",
+        "2018-12"
+      ],
+      "tratamentos": {
+        "ajuste:id_em_notacao_cientifica_convertido": 2
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2019.csv",
+      "sha256": "ae3a559cce2247284ca8a4655011ea98cb5778465f57b96ae067787b944909f0",
+      "bytes": 66460423,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140642Z",
+      "linhas_lidas": 176104,
+      "linhas_por_tabela": {
+        "pessoas": 176104
+      },
+      "periodos": [
+        "2019-01",
+        "2019-02",
+        "2019-03",
+        "2019-04",
+        "2019-05",
+        "2019-06",
+        "2019-07",
+        "2019-08",
+        "2019-09",
+        "2019-10",
+        "2019-11",
+        "2019-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_zero_(sem_veiculo)_anulado": 15978,
+        "ajuste:id_em_notacao_cientifica_convertido": 1,
+        "ajuste:idade_acima_de_110_anulada": 236,
+        "ajuste:idade_sentinela_zero_anulada": 9271,
+        "ajuste:linha_de_veiculo_sem_pessoa": 13604
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2019_todas_causas_tipos.csv",
+      "sha256": "f67be7be9fac5f5ae1a3f669b660c55d318afc5c7aff300418806dea2d30ecd9",
+      "bytes": 125404559,
+      "tipo": "causas_tipos",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140652Z",
+      "linhas_lidas": 324192,
+      "linhas_por_tabela": {
+        "causas": 80431,
+        "tipos": 93676
+      },
+      "periodos": [
+        "2019-01",
+        "2019-02",
+        "2019-03",
+        "2019-04",
+        "2019-05",
+        "2019-06",
+        "2019-07",
+        "2019-08",
+        "2019-09",
+        "2019-10",
+        "2019-11",
+        "2019-12"
+      ],
+      "tratamentos": {
+        "ajuste:id_em_notacao_cientifica_convertido": 2
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2020.csv",
+      "sha256": "4fb2039a3f24d6a6176496cc1f60518609d9fa01c0fc990d580b89e36d392ab8",
+      "bytes": 61366425,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140659Z",
+      "linhas_lidas": 162245,
+      "linhas_por_tabela": {
+        "pessoas": 162245
+      },
+      "periodos": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06",
+        "2020-07",
+        "2020-08",
+        "2020-09",
+        "2020-10",
+        "2020-11",
+        "2020-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_zero_(sem_veiculo)_anulado": 15472,
+        "ajuste:id_em_notacao_cientifica_convertido": 3,
+        "ajuste:idade_acima_de_110_anulada": 204,
+        "ajuste:idade_sentinela_zero_anulada": 10069,
+        "ajuste:linha_de_veiculo_sem_pessoa": 14488
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2020_todas_causas_tipos.csv",
+      "sha256": "d771a151c26bcdcee6b30f22f5c286ebf189bee19be458be05e131f6e64905f4",
+      "bytes": 149275638,
+      "tipo": "causas_tipos",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140710Z",
+      "linhas_lidas": 384640,
+      "linhas_por_tabela": {
+        "causas": 85239,
+        "tipos": 97687
+      },
+      "periodos": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06",
+        "2020-07",
+        "2020-08",
+        "2020-09",
+        "2020-10",
+        "2020-11",
+        "2020-12"
+      ],
+      "tratamentos": {
+        "ajuste:id_em_notacao_cientifica_convertido": 6
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2021.csv",
+      "sha256": "7e8b07440d8fedb79a070f5047a3ab43282e30fd7d1bccac7a6d23e49fc461be",
+      "bytes": 63876402,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140717Z",
+      "linhas_lidas": 166287,
+      "linhas_por_tabela": {
+        "pessoas": 166287
+      },
+      "periodos": [
+        "2021-01",
+        "2021-02",
+        "2021-03",
+        "2021-04",
+        "2021-05",
+        "2021-06",
+        "2021-07",
+        "2021-08",
+        "2021-09",
+        "2021-10",
+        "2021-11",
+        "2021-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_zero_(sem_veiculo)_anulado": 15788,
+        "ajuste:id_em_notacao_cientifica_convertido": 15,
+        "ajuste:idade_acima_de_110_anulada": 169,
+        "ajuste:idade_sentinela_zero_anulada": 10340,
+        "ajuste:linha_de_veiculo_sem_pessoa": 15313
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2021_todas_causas_tipos.csv",
+      "sha256": "d207a0f80e9f3673675ce293e1ad86aa4cca1f30102a1b4d139bb55498a89627",
+      "bytes": 170735605,
+      "tipo": "causas_tipos",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140729Z",
+      "linhas_lidas": 436523,
+      "linhas_por_tabela": {
+        "causas": 90784,
+        "tipos": 102235
+      },
+      "periodos": [
+        "2021-01",
+        "2021-02",
+        "2021-03",
+        "2021-04",
+        "2021-05",
+        "2021-06",
+        "2021-07",
+        "2021-08",
+        "2021-09",
+        "2021-10",
+        "2021-11",
+        "2021-12"
+      ],
+      "tratamentos": {
+        "ajuste:id_em_notacao_cientifica_convertido": 30
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2022.csv",
+      "sha256": "50fc4425d972d2405c49a2bf152813ed037af352b8a108f74b8971562be48349",
+      "bytes": 63357617,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140737Z",
+      "linhas_lidas": 170825,
+      "linhas_por_tabela": {
+        "pessoas": 170825
+      },
+      "periodos": [
+        "2022-01",
+        "2022-02",
+        "2022-03",
+        "2022-04",
+        "2022-05",
+        "2022-06",
+        "2022-07",
+        "2022-08",
+        "2022-09",
+        "2022-10",
+        "2022-11",
+        "2022-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_zero_(sem_veiculo)_anulado": 16033,
+        "ajuste:idade_acima_de_110_anulada": 76,
+        "ajuste:idade_sentinela_zero_anulada": 10617,
+        "ajuste:linha_de_veiculo_sem_pessoa": 15439
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2022_todas_causas_tipos.csv",
+      "sha256": "480365bfbe0eaa0cd25384b4a31f0258ad3de6f61d5e4b392f4d08a306d35998",
+      "bytes": 191786699,
+      "tipo": "causas_tipos",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140750Z",
+      "linhas_lidas": 507204,
+      "linhas_por_tabela": {
+        "causas": 98525,
+        "tipos": 106290
+      },
+      "periodos": [
+        "2022-01",
+        "2022-02",
+        "2022-03",
+        "2022-04",
+        "2022-05",
+        "2022-06",
+        "2022-07",
+        "2022-08",
+        "2022-09",
+        "2022-10",
+        "2022-11",
+        "2022-12"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2023.csv",
+      "sha256": "d57fa88fc9455629c2c327b719dd86ea6fc36a2dcae2d956225837dc317245e2",
+      "bytes": 68521085,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140758Z",
+      "linhas_lidas": 183361,
+      "linhas_por_tabela": {
+        "pessoas": 183361
+      },
+      "periodos": [
+        "2023-01",
+        "2023-02",
+        "2023-03",
+        "2023-04",
+        "2023-05",
+        "2023-06",
+        "2023-07",
+        "2023-08",
+        "2023-09",
+        "2023-10",
+        "2023-11",
+        "2023-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_zero_(sem_veiculo)_anulado": 16571,
+        "ajuste:idade_acima_de_110_anulada": 151,
+        "ajuste:idade_sentinela_zero_anulada": 10776,
+        "ajuste:linha_de_veiculo_sem_pessoa": 16428
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2023_todas_causas_tipos.csv",
+      "sha256": "3405aea4cc21e1f9b296ac838b42fd4d1db888937fa3c65e6b98f7a62ac7fc31",
+      "bytes": 216058400,
+      "tipo": "causas_tipos",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140812Z",
+      "linhas_lidas": 571052,
+      "linhas_por_tabela": {
+        "causas": 105591,
+        "tipos": 113532
+      },
+      "periodos": [
+        "2023-01",
+        "2023-02",
+        "2023-03",
+        "2023-04",
+        "2023-05",
+        "2023-06",
+        "2023-07",
+        "2023-08",
+        "2023-09",
+        "2023-10",
+        "2023-11",
+        "2023-12"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2024.csv",
+      "sha256": "849b45d9980e479eece51fa6a40dc2b988c608641353e0664f6780d893d9e250",
+      "bytes": 73655294,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140821Z",
+      "linhas_lidas": 196448,
+      "linhas_por_tabela": {
+        "pessoas": 196448
+      },
+      "periodos": [
+        "2024-01",
+        "2024-02",
+        "2024-03",
+        "2024-04",
+        "2024-05",
+        "2024-06",
+        "2024-07",
+        "2024-08",
+        "2024-09",
+        "2024-10",
+        "2024-11",
+        "2024-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_zero_(sem_veiculo)_anulado": 17712,
+        "ajuste:id_em_notacao_cientifica_convertido": 3,
+        "ajuste:idade_acima_de_110_anulada": 281,
+        "ajuste:idade_sentinela_zero_anulada": 11784,
+        "ajuste:linha_de_veiculo_sem_pessoa": 17201
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2024_todas_causas_tipos.csv",
+      "sha256": "a6457e965dc360cc1bc7dd0fd90929b0a56dee085352f1d0d4e4b6b4f8b61300",
+      "bytes": 230923285,
+      "tipo": "causas_tipos",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140836Z",
+      "linhas_lidas": 603839,
+      "linhas_por_tabela": {
+        "causas": 111389,
+        "tipos": 124272
+      },
+      "periodos": [
+        "2024-01",
+        "2024-02",
+        "2024-03",
+        "2024-04",
+        "2024-05",
+        "2024-06",
+        "2024-07",
+        "2024-08",
+        "2024-09",
+        "2024-10",
+        "2024-11",
+        "2024-12"
+      ],
+      "tratamentos": {
+        "ajuste:id_em_notacao_cientifica_convertido": 3
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2025.csv",
+      "sha256": "5bdd2e3186cbe3ccfc915f895b9f2c2454142ce712b75f0d58728dab72a1babe",
+      "bytes": 72881148,
+      "tipo": "pessoas",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140844Z",
+      "linhas_lidas": 194629,
+      "linhas_por_tabela": {
+        "pessoas": 194629
+      },
+      "periodos": [
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12"
+      ],
+      "tratamentos": {
+        "ajuste:ano_fabricacao_zero_(sem_veiculo)_anulado": 17394,
+        "ajuste:idade_acima_de_110_anulada": 139,
+        "ajuste:idade_sentinela_zero_anulada": 11480,
+        "ajuste:linha_de_veiculo_sem_pessoa": 17150
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "acidentes2025_todas_causas_tipos.csv",
+      "sha256": "b48968a8017a9abda7b6149c894554c7cc3ca1c09257c7dedf2937ebce02e0d3",
+      "bytes": 223019483,
+      "tipo": "causas_tipos",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140859Z",
+      "linhas_lidas": 584010,
+      "linhas_por_tabela": {
+        "causas": 107645,
+        "tipos": 124555
+      },
+      "periodos": [
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "ago.csv",
+      "sha256": "ccc0bf84d5e3509582a3cabd0f5ffeec931d32d849bd6010ea3cd0f930521aed",
+      "bytes": 50331503,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T140910Z",
+      "linhas_lidas": 227025,
+      "linhas_por_tabela": {
+        "infracoes": 227025
+      },
+      "periodos": [
+        "2017-08"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 225539,
+        "info:chave_sintetica_do_auto_(layout_antigo)": 227025
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2007.csv",
+      "sha256": "2558046342ed64ae460f55cf772a0bfbca05eed4d1bf16404462347e5e4a4abf",
+      "bytes": 22643195,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140916Z",
+      "linhas_lidas": 127675,
+      "linhas_por_tabela": {
+        "ocorrencias": 127671
+      },
+      "periodos": [
+        "2007-01",
+        "2007-02",
+        "2007-03",
+        "2007-04",
+        "2007-05",
+        "2007-06",
+        "2007-07",
+        "2007-08",
+        "2007-09",
+        "2007-10",
+        "2007-11",
+        "2007-12"
+      ],
+      "tratamentos": {
+        "descartado:id_duplicado": 4
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2008.csv",
+      "sha256": "aa8f1312becbad07588bd58b866866988268fa87a06131c3c032dd4809d54c76",
+      "bytes": 25020073,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140924Z",
+      "linhas_lidas": 141043,
+      "linhas_por_tabela": {
+        "ocorrencias": 141038
+      },
+      "periodos": [
+        "2008-01",
+        "2008-02",
+        "2008-03",
+        "2008-04",
+        "2008-05",
+        "2008-06",
+        "2008-07",
+        "2008-08",
+        "2008-09",
+        "2008-10",
+        "2008-11",
+        "2008-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 6,
+        "descartado:id_duplicado": 5
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2009.csv",
+      "sha256": "9dc43237ec00581f45ea2536c8450f317b567be06633d2ccf825709b3a4bef48",
+      "bytes": 28138339,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140932Z",
+      "linhas_lidas": 158646,
+      "linhas_por_tabela": {
+        "ocorrencias": 158646
+      },
+      "periodos": [
+        "2009-01",
+        "2009-02",
+        "2009-03",
+        "2009-04",
+        "2009-05",
+        "2009-06",
+        "2009-07",
+        "2009-08",
+        "2009-09",
+        "2009-10",
+        "2009-11",
+        "2009-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 48
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2010.csv",
+      "sha256": "16783828c50020961983287bddec7784480ecdd31f508a96c0232b8a31a5e771",
+      "bytes": 32699546,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140941Z",
+      "linhas_lidas": 183469,
+      "linhas_por_tabela": {
+        "ocorrencias": 183465
+      },
+      "periodos": [
+        "2010-01",
+        "2010-02",
+        "2010-03",
+        "2010-04",
+        "2010-05",
+        "2010-06",
+        "2010-07",
+        "2010-08",
+        "2010-09",
+        "2010-10",
+        "2010-11",
+        "2010-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 2,
+        "descartado:id_duplicado": 4
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2011.csv",
+      "sha256": "50ddcbbea14893edcc96e59a5deed851c4b47f8294e9eba139bb2a4f6ab7d50e",
+      "bytes": 34378093,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T140951Z",
+      "linhas_lidas": 192326,
+      "linhas_por_tabela": {
+        "ocorrencias": 192322
+      },
+      "periodos": [
+        "2011-01",
+        "2011-02",
+        "2011-03",
+        "2011-04",
+        "2011-05",
+        "2011-06",
+        "2011-07",
+        "2011-08",
+        "2011-09",
+        "2011-10",
+        "2011-11",
+        "2011-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 1,
+        "descartado:id_duplicado": 4
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2012.csv",
+      "sha256": "78358d1de900d49f84021363f352c5ac77092e28a4fa69d817f86f03e716c6af",
+      "bytes": 39131514,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141000Z",
+      "linhas_lidas": 184568,
+      "linhas_por_tabela": {
+        "ocorrencias": 184561
+      },
+      "periodos": [
+        "2012-01",
+        "2012-02",
+        "2012-03",
+        "2012-04",
+        "2012-05",
+        "2012-06",
+        "2012-07",
+        "2012-08",
+        "2012-09",
+        "2012-10",
+        "2012-11",
+        "2012-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 8,
+        "descartado:id_duplicado": 7
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2013.csv",
+      "sha256": "cf5a80a2c7e5c870f21ebc7ede03f51ff4233df655714be07a538045ce25f2ad",
+      "bytes": 39746205,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141009Z",
+      "linhas_lidas": 186748,
+      "linhas_por_tabela": {
+        "ocorrencias": 186745
+      },
+      "periodos": [
+        "2013-01",
+        "2013-02",
+        "2013-03",
+        "2013-04",
+        "2013-05",
+        "2013-06",
+        "2013-07",
+        "2013-08",
+        "2013-09",
+        "2013-10",
+        "2013-11",
+        "2013-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 4,
+        "descartado:id_duplicado": 3
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2014.csv",
+      "sha256": "ad273d6c0152119a00d5c6e4aade2ecef1ee5f78ef1100ae8a31eb89e2a36c38",
+      "bytes": 36189753,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141017Z",
+      "linhas_lidas": 169201,
+      "linhas_por_tabela": {
+        "ocorrencias": 169197
+      },
+      "periodos": [
+        "2014-01",
+        "2014-02",
+        "2014-03",
+        "2014-04",
+        "2014-05",
+        "2014-06",
+        "2014-07",
+        "2014-08",
+        "2014-09",
+        "2014-10",
+        "2014-11",
+        "2014-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 2,
+        "alerta:classificacao_incoerente_com_mortos": 1,
+        "descartado:id_duplicado": 4
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2015.csv",
+      "sha256": "4428cfa24ca371b91c4b183b6255aa99b774cca406a5ed941e0cd991a5dc78c2",
+      "bytes": 26243455,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141023Z",
+      "linhas_lidas": 122161,
+      "linhas_por_tabela": {
+        "ocorrencias": 122158
+      },
+      "periodos": [
+        "2015-01",
+        "2015-02",
+        "2015-03",
+        "2015-04",
+        "2015-05",
+        "2015-06",
+        "2015-07",
+        "2015-08",
+        "2015-09",
+        "2015-10",
+        "2015-11",
+        "2015-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 2,
+        "descartado:id_duplicado": 3
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2016.csv",
+      "sha256": "e0d029c3336d7dd087223542c09cd4167cf047b1085752927647bd69b5dbd908",
+      "bytes": 19910379,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141028Z",
+      "linhas_lidas": 96363,
+      "linhas_por_tabela": {
+        "ocorrencias": 96362
+      },
+      "periodos": [
+        "sem-data"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 1,
+        "ajuste:classificacao_derivada_das_contagens": 1,
+        "ajuste:data_invalida_ou_ausente": 96363,
+        "descartado:id_duplicado": 1
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2017.csv",
+      "sha256": "cd82b0c8d5cfa7c91e60798dd3c2838dade30e60c27282363e579684cfe0a94f",
+      "bytes": 24887945,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141033Z",
+      "linhas_lidas": 89567,
+      "linhas_por_tabela": {
+        "ocorrencias": 89567
+      },
+      "periodos": [
+        "2017-01",
+        "2017-02",
+        "2017-03",
+        "2017-04",
+        "2017-05",
+        "2017-06",
+        "2017-07",
+        "2017-08",
+        "2017-09",
+        "2017-10",
+        "2017-11",
+        "2017-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 146,
+        "ajuste:classificacao_derivada_das_contagens": 1,
+        "ajuste:coordenada_fora_do_brasil_anulada": 53
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2018.csv",
+      "sha256": "c02eea7d04ebdc077a2b372bcd42bca9e60e459432d3cc5a062e4dfe16e007bd",
+      "bytes": 19481431,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141038Z",
+      "linhas_lidas": 69333,
+      "linhas_por_tabela": {
+        "ocorrencias": 69333
+      },
+      "periodos": [
+        "2018-01",
+        "2018-02",
+        "2018-03",
+        "2018-04",
+        "2018-05",
+        "2018-06",
+        "2018-07",
+        "2018-08",
+        "2018-09",
+        "2018-10",
+        "2018-11",
+        "2018-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 115,
+        "ajuste:classificacao_derivada_das_contagens": 1,
+        "ajuste:id_em_notacao_cientifica_convertido": 1
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2019.csv",
+      "sha256": "2215dc0193d7e52ed81ef95fa846b0f7100455fa1ddafa21d9b88b9fa26e2cf8",
+      "bytes": 19101686,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141043Z",
+      "linhas_lidas": 67558,
+      "linhas_por_tabela": {
+        "ocorrencias": 67558
+      },
+      "periodos": [
+        "2019-01",
+        "2019-02",
+        "2019-03",
+        "2019-04",
+        "2019-05",
+        "2019-06",
+        "2019-07",
+        "2019-08",
+        "2019-09",
+        "2019-10",
+        "2019-11",
+        "2019-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 98,
+        "ajuste:classificacao_derivada_das_contagens": 1,
+        "ajuste:id_em_notacao_cientifica_convertido": 1
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2020.csv",
+      "sha256": "059411ff91a3d5306c82ef17e3a92898f9ce47aed25de5c76687d5bbf5d5c80d",
+      "bytes": 18042979,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141048Z",
+      "linhas_lidas": 63585,
+      "linhas_por_tabela": {
+        "ocorrencias": 63585
+      },
+      "periodos": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06",
+        "2020-07",
+        "2020-08",
+        "2020-09",
+        "2020-10",
+        "2020-11",
+        "2020-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 162,
+        "ajuste:classificacao_derivada_das_contagens": 2,
+        "ajuste:id_em_notacao_cientifica_convertido": 1
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2021.csv",
+      "sha256": "b8ebf8352a5ad0d9d79a91a4dada665a1ec0bfca9fc2649e1c73fe80cfe6c4dd",
+      "bytes": 18675025,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141052Z",
+      "linhas_lidas": 64567,
+      "linhas_por_tabela": {
+        "ocorrencias": 64567
+      },
+      "periodos": [
+        "2021-01",
+        "2021-02",
+        "2021-03",
+        "2021-04",
+        "2021-05",
+        "2021-06",
+        "2021-07",
+        "2021-08",
+        "2021-09",
+        "2021-10",
+        "2021-11",
+        "2021-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 171,
+        "ajuste:classificacao_derivada_das_contagens": 1,
+        "ajuste:id_em_notacao_cientifica_convertido": 1
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2022.csv",
+      "sha256": "d11bbfdec9b5df6f08a083c63acb2c1b4d3bad71d31481d7ce1368d5fa38783a",
+      "bytes": 18723306,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141056Z",
+      "linhas_lidas": 64606,
+      "linhas_por_tabela": {
+        "ocorrencias": 64606
+      },
+      "periodos": [
+        "2022-01",
+        "2022-02",
+        "2022-03",
+        "2022-04",
+        "2022-05",
+        "2022-06",
+        "2022-07",
+        "2022-08",
+        "2022-09",
+        "2022-10",
+        "2022-11",
+        "2022-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 199,
+        "ajuste:classificacao_derivada_das_contagens": 1
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2023.csv",
+      "sha256": "2e6a9eac714524822fc3150be4d0614e27c7f14aa674520c94e5d2e4089356dd",
+      "bytes": 19770946,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141101Z",
+      "linhas_lidas": 67766,
+      "linhas_por_tabela": {
+        "ocorrencias": 67766
+      },
+      "periodos": [
+        "2023-01",
+        "2023-02",
+        "2023-03",
+        "2023-04",
+        "2023-05",
+        "2023-06",
+        "2023-07",
+        "2023-08",
+        "2023-09",
+        "2023-10",
+        "2023-11",
+        "2023-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 160,
+        "ajuste:classificacao_derivada_das_contagens": 1
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2024.csv",
+      "sha256": "7d26e6f4528c2ca2636a8fea2c5bc8755a0ff6a182d82c238a8793b016e4366d",
+      "bytes": 21365616,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141105Z",
+      "linhas_lidas": 73202,
+      "linhas_por_tabela": {
+        "ocorrencias": 73202
+      },
+      "periodos": [
+        "2024-01",
+        "2024-02",
+        "2024-03",
+        "2024-04",
+        "2024-05",
+        "2024-06",
+        "2024-07",
+        "2024-08",
+        "2024-09",
+        "2024-10",
+        "2024-11",
+        "2024-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 189,
+        "ajuste:classificacao_derivada_das_contagens": 1,
+        "ajuste:coordenada_fora_do_brasil_anulada": 1,
+        "ajuste:id_em_notacao_cientifica_convertido": 1
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "datatran2025.csv",
+      "sha256": "bb844d45a07b5b50f5f76011e28f47e370fa6742e9211edac5510dcbe72ce4d8",
+      "bytes": 21143436,
+      "tipo": "ocorrencias",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141110Z",
+      "linhas_lidas": 72529,
+      "linhas_por_tabela": {
+        "ocorrencias": 72529
+      },
+      "periodos": [
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12"
+      ],
+      "tratamentos": {
+        "ajuste:br_zero_convertido_em_nulo": 167,
+        "ajuste:classificacao_derivada_das_contagens": 1
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "dez.csv",
+      "sha256": "4887678ff5b6d3191c19a779c70823d4a4c4067b66bc60219426a9a4c56c7769",
+      "bytes": 126736782,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T141137Z",
+      "linhas_lidas": 580895,
+      "linhas_por_tabela": {
+        "infracoes": 580895
+      },
+      "periodos": [
+        "2017-12"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 579871,
+        "info:chave_sintetica_do_auto_(layout_antigo)": 580895
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "fev.csv",
+      "sha256": "bf283c22b36d00df4c81a9b8bd8e23928de8c68b938752fcd477ba03a6f96fa4",
+      "bytes": 141587832,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T141207Z",
+      "linhas_lidas": 641411,
+      "linhas_por_tabela": {
+        "infracoes": 641411
+      },
+      "periodos": [
+        "2017-02"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 638509,
+        "info:chave_sintetica_do_auto_(layout_antigo)": 641411
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2019_01.csv",
+      "sha256": "595d4bdf18a7d1d5164cce980b8120310778dbedd896099804d16d4ded516152",
+      "bytes": 96675189,
+      "tipo": "infracoes",
+      "encoding": "utf-8-sig",
+      "separador": ";",
+      "ingerido_em": "20261116T141232Z",
+      "linhas_lidas": 518476,
+      "linhas_por_tabela": {
+        "infracoes": 518476
+      },
+      "periodos": [
+        "2019-01"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2019_02.csv",
+      "sha256": "cccfce9634182a3092a9ecc4460e54558ee0f221e6d75c4bd5a8ed6a9d9fb706",
+      "bytes": 80218807,
+      "tipo": "infracoes",
+      "encoding": "utf-8-sig",
+      "separador": ";",
+      "ingerido_em": "20261116T141252Z",
+      "linhas_lidas": 429750,
+      "linhas_por_tabela": {
+        "infracoes": 429750
+      },
+      "periodos": [
+        "2019-02"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2019_03.csv",
+      "sha256": "8639db92fe7f64784c1954e404923252255a9bd267290390fa41026da4f9b3e9",
+      "bytes": 105609852,
+      "tipo": "infracoes",
+      "encoding": "utf-8-sig",
+      "separador": ";",
+      "ingerido_em": "20261116T141318Z",
+      "linhas_lidas": 568257,
+      "linhas_por_tabela": {
+        "infracoes": 568257
+      },
+      "periodos": [
+        "2019-03"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2019_04.csv",
+      "sha256": "177a262b40bad41cc4519fc7938cc35d756dc236513bf1c220a1fb435c07c8a9",
+      "bytes": 99800993,
+      "tipo": "infracoes",
+      "encoding": "utf-8-sig",
+      "separador": ";",
+      "ingerido_em": "20261116T141343Z",
+      "linhas_lidas": 537848,
+      "linhas_por_tabela": {
+        "infracoes": 537848
+      },
+      "periodos": [
+        "2019-04"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2019_05.csv",
+      "sha256": "dd68f36e8d93219f3ccd73730c1fa8738ab94b05a0bbc768e7c141db0dc4b220",
+      "bytes": 90604959,
+      "tipo": "infracoes",
+      "encoding": "utf-8-sig",
+      "separador": ";",
+      "ingerido_em": "20261116T141405Z",
+      "linhas_lidas": 487617,
+      "linhas_por_tabela": {
+        "infracoes": 487617
+      },
+      "periodos": [
+        "2019-05"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2019_06.csv",
+      "sha256": "4d52b5f4901615a04bf855a376f1875293dd9fb378a44d6dc71cdbeb7c9a1716",
+      "bytes": 91327923,
+      "tipo": "infracoes",
+      "encoding": "utf-8-sig",
+      "separador": ";",
+      "ingerido_em": "20261116T141428Z",
+      "linhas_lidas": 492841,
+      "linhas_por_tabela": {
+        "infracoes": 492841
+      },
+      "periodos": [
+        "2019-06"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2019_07.csv",
+      "sha256": "20bba397a9b5f7341fa00fae4e9c0723281c9628bcae78e6e36df68b4a676d40",
+      "bytes": 84740802,
+      "tipo": "infracoes",
+      "encoding": "utf-8-sig",
+      "separador": ";",
+      "ingerido_em": "20261116T141449Z",
+      "linhas_lidas": 455355,
+      "linhas_por_tabela": {
+        "infracoes": 455355
+      },
+      "periodos": [
+        "2019-07"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2019_08.csv",
+      "sha256": "ec38b5a32f715b27e3a3a6429a6ff8bf2dba1036e8656bebd2bf930403cdefb1",
+      "bytes": 83856414,
+      "tipo": "infracoes",
+      "encoding": "utf-8-sig",
+      "separador": ";",
+      "ingerido_em": "20261116T141510Z",
+      "linhas_lidas": 451738,
+      "linhas_por_tabela": {
+        "infracoes": 451738
+      },
+      "periodos": [
+        "2019-08"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2019_09.csv",
+      "sha256": "3d937192611a8905fa51e79d4a3b7254655a9800728afb32e2a623a230167de6",
+      "bytes": 78855017,
+      "tipo": "infracoes",
+      "encoding": "utf-8-sig",
+      "separador": ";",
+      "ingerido_em": "20261116T141529Z",
+      "linhas_lidas": 424875,
+      "linhas_por_tabela": {
+        "infracoes": 424875
+      },
+      "periodos": [
+        "2019-09"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2019_10.csv",
+      "sha256": "2c8f7bcaeae057db7f997b4bac0eadf4292afe0c1e7063559cc64e17d01a1e6a",
+      "bytes": 83491233,
+      "tipo": "infracoes",
+      "encoding": "utf-8-sig",
+      "separador": ";",
+      "ingerido_em": "20261116T141549Z",
+      "linhas_lidas": 449496,
+      "linhas_por_tabela": {
+        "infracoes": 449496
+      },
+      "periodos": [
+        "2019-10"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2019_11.csv",
+      "sha256": "19641828be745abc7bb346eb363589c93ef1092d6fa9041b74ad92d57584d56f",
+      "bytes": 80453529,
+      "tipo": "infracoes",
+      "encoding": "utf-8-sig",
+      "separador": ";",
+      "ingerido_em": "20261116T141609Z",
+      "linhas_lidas": 433133,
+      "linhas_por_tabela": {
+        "infracoes": 433133
+      },
+      "periodos": [
+        "2019-11"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2019_12.csv",
+      "sha256": "b10bf6d95433948ac03ba5ebe6b81279a059f4817336c094c60d3a27dccbd9c1",
+      "bytes": 91425614,
+      "tipo": "infracoes",
+      "encoding": "utf-8-sig",
+      "separador": ";",
+      "ingerido_em": "20261116T141631Z",
+      "linhas_lidas": 492724,
+      "linhas_por_tabela": {
+        "infracoes": 492724
+      },
+      "periodos": [
+        "2019-12"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2020_01.csv",
+      "sha256": "ae74bbe8ba13c6e50c2af1d304345d4f15e9f97890c1b2be4c965bbf528073d7",
+      "bytes": 103294710,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141653Z",
+      "linhas_lidas": 483759,
+      "linhas_por_tabela": {
+        "infracoes": 483759
+      },
+      "periodos": [
+        "2020-01"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2020_02.csv",
+      "sha256": "51cf91663df07f35d7b6278eac36f5e970eda78bc41a702ce831f59606582638",
+      "bytes": 106524590,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141717Z",
+      "linhas_lidas": 509794,
+      "linhas_por_tabela": {
+        "infracoes": 509794
+      },
+      "periodos": [
+        "2020-02"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2020_03.csv",
+      "sha256": "b315809532318caa88dc55e0ca7583347d84c5758244c3ac75ff8abe0afab20d",
+      "bytes": 82737669,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141735Z",
+      "linhas_lidas": 396890,
+      "linhas_por_tabela": {
+        "infracoes": 396890
+      },
+      "periodos": [
+        "2020-03"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2020_04.csv",
+      "sha256": "1a5201eb15037c84e5325b75e88f84d5ddd7cc6b8e85cd73fa8d1f1613c8252f",
+      "bytes": 62491899,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141749Z",
+      "linhas_lidas": 301818,
+      "linhas_por_tabela": {
+        "infracoes": 301818
+      },
+      "periodos": [
+        "2020-04"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2020_05.csv",
+      "sha256": "a915b265a43616ec277170a2655c04bc2517b8d0b9f7b4171dbe6ffe2510ba1c",
+      "bytes": 82684847,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141808Z",
+      "linhas_lidas": 397858,
+      "linhas_por_tabela": {
+        "infracoes": 397858
+      },
+      "periodos": [
+        "2020-05"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2020_06.csv",
+      "sha256": "85ebf62ec2e56c4a671af0c0fac54752b9177df6191580d046667792595979af",
+      "bytes": 82479338,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141827Z",
+      "linhas_lidas": 396981,
+      "linhas_por_tabela": {
+        "infracoes": 396981
+      },
+      "periodos": [
+        "2020-06"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2020_07.csv",
+      "sha256": "c4afa498e332e0fc9a25c43f2dfa9a447339a09ac9e3140e182c3b93b49e2a06",
+      "bytes": 83263368,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141847Z",
+      "linhas_lidas": 401643,
+      "linhas_por_tabela": {
+        "infracoes": 401641
+      },
+      "periodos": [
+        "2020-07"
+      ],
+      "tratamentos": {
+        "descartado:auto_duplicado": 2
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2020_08.csv",
+      "sha256": "17aa0489e5fa85a5de6f5afb76eb57289213d89d78df746563ab0de9df236dd3",
+      "bytes": 91958567,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141906Z",
+      "linhas_lidas": 443654,
+      "linhas_por_tabela": {
+        "infracoes": 443651
+      },
+      "periodos": [
+        "2020-08"
+      ],
+      "tratamentos": {
+        "descartado:auto_duplicado": 3
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2020_09.csv",
+      "sha256": "f7ad928a334c6bf771e89196d0ffe6a591b4f04c23ba6f90e7dc7f7ce8ad41fe",
+      "bytes": 88382279,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141927Z",
+      "linhas_lidas": 425606,
+      "linhas_por_tabela": {
+        "infracoes": 425602
+      },
+      "periodos": [
+        "2020-09"
+      ],
+      "tratamentos": {
+        "descartado:auto_duplicado": 4
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infracoes_2020_10.csv",
+      "sha256": "fce9a09d1ca4d9d3fa814e8c393db43e86279a7bda92e36068743bf12bc6426d",
+      "bytes": 98087170,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T141950Z",
+      "linhas_lidas": 472580,
+      "linhas_por_tabela": {
+        "infracoes": 472575
+      },
+      "periodos": [
+        "2020-10"
+      ],
+      "tratamentos": {
+        "descartado:auto_duplicado": 5
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2021_01.csv",
+      "sha256": "a5c40d940c6f3f2387a8e34681020eef8225c515396a9900a1ed530ab74c29d2",
+      "bytes": 91910827,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142010Z",
+      "linhas_lidas": 442458,
+      "linhas_por_tabela": {
+        "infracoes": 442458
+      },
+      "periodos": [
+        "2021-01"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2021_02.csv",
+      "sha256": "cdd64d3ff2d5bcdb112ec7a08ea6f0243a1ad81478d14aa87c25d364368c3226",
+      "bytes": 91919394,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142030Z",
+      "linhas_lidas": 441593,
+      "linhas_por_tabela": {
+        "infracoes": 441593
+      },
+      "periodos": [
+        "2021-02"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2021_03.csv",
+      "sha256": "1bf480fc589b83bb15524d0db0c15faeaafe397bb8aa7f14e8a42bde993ab09f",
+      "bytes": 78795492,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142046Z",
+      "linhas_lidas": 380688,
+      "linhas_por_tabela": {
+        "infracoes": 380688
+      },
+      "periodos": [
+        "2021-03"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2021_04.csv",
+      "sha256": "7074afe16efa93a33afb4df3fbb88b2652af37298fcf0f8ebd263ad864898448",
+      "bytes": 77772651,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142103Z",
+      "linhas_lidas": 374764,
+      "linhas_por_tabela": {
+        "infracoes": 374764
+      },
+      "periodos": [
+        "2021-04"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2021_05.csv",
+      "sha256": "8904f61572cf761efd77191ae312832512358ab1b5cbf76daa4255d4dd6d3683",
+      "bytes": 85548779,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142122Z",
+      "linhas_lidas": 412057,
+      "linhas_por_tabela": {
+        "infracoes": 412057
+      },
+      "periodos": [
+        "2021-05"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2021_06.csv",
+      "sha256": "369da5abdcaa02994a4cfc7d9fd9dfd9d184c52e9b47fd946fc01e1a61564c92",
+      "bytes": 95155869,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142142Z",
+      "linhas_lidas": 456576,
+      "linhas_por_tabela": {
+        "infracoes": 456576
+      },
+      "periodos": [
+        "2021-06"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2021_07.csv",
+      "sha256": "89d347f5610f11b036f518ac9f6af0dc14db0c2dd37178eca3ab5f0f98571ce1",
+      "bytes": 97954203,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142203Z",
+      "linhas_lidas": 470598,
+      "linhas_por_tabela": {
+        "infracoes": 470598
+      },
+      "periodos": [
+        "2021-07"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2021_08.csv",
+      "sha256": "ddc7501cd35cb99aff287dd85339452946fdc8bce2f964fe1cadf6bc871848e7",
+      "bytes": 103546221,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142226Z",
+      "linhas_lidas": 496155,
+      "linhas_por_tabela": {
+        "infracoes": 496155
+      },
+      "periodos": [
+        "2021-08"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2021_09.csv",
+      "sha256": "8ea69cc5fd90c0d0ab8964b931e28d084fe9e33ea6600de512624bd70697e737",
+      "bytes": 105850422,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142249Z",
+      "linhas_lidas": 503323,
+      "linhas_por_tabela": {
+        "infracoes": 503323
+      },
+      "periodos": [
+        "2021-09"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2021_10.csv",
+      "sha256": "d8cbdc563150aa5300b354ef8cb13de1c43bb7ed21c0436a94ff3e139adbedde",
+      "bytes": 100983634,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142312Z",
+      "linhas_lidas": 477682,
+      "linhas_por_tabela": {
+        "infracoes": 477682
+      },
+      "periodos": [
+        "2021-10"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2021_11.csv",
+      "sha256": "8f92c96cfee7206c8ef7c58b553dbf02df0171bc4f773888f856d0e33049de9f",
+      "bytes": 79652809,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142330Z",
+      "linhas_lidas": 370634,
+      "linhas_por_tabela": {
+        "infracoes": 370634
+      },
+      "periodos": [
+        "2021-11"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2021_12.csv",
+      "sha256": "a8bb27309c66e228a05035be5e2f887f70dbd6a873136f3bc866d7193110ebb5",
+      "bytes": 89603616,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142348Z",
+      "linhas_lidas": 414771,
+      "linhas_por_tabela": {
+        "infracoes": 414771
+      },
+      "periodos": [
+        "2021-12"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2022_01.csv",
+      "sha256": "192b06a5573f3a51342f2c6fa18fd21c54fab5c427d9d15e29a1a8146ca2fbf9",
+      "bytes": 87092773,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142404Z",
+      "linhas_lidas": 336938,
+      "linhas_por_tabela": {
+        "infracoes": 336938
+      },
+      "periodos": [
+        "2022-01"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2022_02.csv",
+      "sha256": "04e326a8b412b9498fda7606bcb1824093a79cad24c26315679c833d942c4e59",
+      "bytes": 96891006,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142423Z",
+      "linhas_lidas": 375828,
+      "linhas_por_tabela": {
+        "infracoes": 375828
+      },
+      "periodos": [
+        "2022-02"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2022_03.csv",
+      "sha256": "7720dcfc7550793e003e6e1152a08380e4ebe7dc4fd5a389b7c6f6d32345c2a2",
+      "bytes": 101400197,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142442Z",
+      "linhas_lidas": 392661,
+      "linhas_por_tabela": {
+        "infracoes": 392661
+      },
+      "periodos": [
+        "2022-03"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2022_04.csv",
+      "sha256": "310dc2a2e5aab6f4cd502609e23d93ada9a601c334ba89d60d76f5112d4b1384",
+      "bytes": 105711646,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142504Z",
+      "linhas_lidas": 408532,
+      "linhas_por_tabela": {
+        "infracoes": 408532
+      },
+      "periodos": [
+        "2022-04"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2022_05.csv",
+      "sha256": "8472621456f4bbe63cf82cb63e432a5897783459dbd2d962fca1828521f4edbf",
+      "bytes": 91251591,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142522Z",
+      "linhas_lidas": 351674,
+      "linhas_por_tabela": {
+        "infracoes": 351674
+      },
+      "periodos": [
+        "2022-05"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2022_06.csv",
+      "sha256": "00873705119e8a046d64c82b0d844b4458e33cfc9ae954c1ef15351153b2f06f",
+      "bytes": 84231983,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142539Z",
+      "linhas_lidas": 325024,
+      "linhas_por_tabela": {
+        "infracoes": 325024
+      },
+      "periodos": [
+        "2022-06"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2022_07.csv",
+      "sha256": "be0c3df3efc4e3cde6f1cda29e210f843451dd993da9b9137b31a1764f88bebf",
+      "bytes": 79907743,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142556Z",
+      "linhas_lidas": 308246,
+      "linhas_por_tabela": {
+        "infracoes": 308246
+      },
+      "periodos": [
+        "2022-07"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2022_08.csv",
+      "sha256": "e67340cadb4f53386d087c5e1e7de34cc0d972fc9a49acf55e372bac797c951d",
+      "bytes": 82432802,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142613Z",
+      "linhas_lidas": 318123,
+      "linhas_por_tabela": {
+        "infracoes": 318123
+      },
+      "periodos": [
+        "2022-08"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2022_09.csv",
+      "sha256": "1b339ed812c9759c302c1a7330d1f950ae1f9ba4a7048157858fef0770dc577d",
+      "bytes": 85018691,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142631Z",
+      "linhas_lidas": 328568,
+      "linhas_por_tabela": {
+        "infracoes": 328568
+      },
+      "periodos": [
+        "2022-09"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2022_10.csv",
+      "sha256": "68187caedcc7add3b723e1e6b88684a3655517dda737f6e26a39ba12e80fb300",
+      "bytes": 91294793,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142649Z",
+      "linhas_lidas": 353039,
+      "linhas_por_tabela": {
+        "infracoes": 353039
+      },
+      "periodos": [
+        "2022-10"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2022_11.csv",
+      "sha256": "632b223bda2194cab290cb58b9f18b3870fa77751b0303793b8fa993e534fa1e",
+      "bytes": 71299779,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142704Z",
+      "linhas_lidas": 276025,
+      "linhas_por_tabela": {
+        "infracoes": 276025
+      },
+      "periodos": [
+        "2022-11"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2022_12.csv",
+      "sha256": "128296740d10423f58ec52fde4550fb8bbbaff2216b32864b169d94c39c8ee8d",
+      "bytes": 93496192,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142723Z",
+      "linhas_lidas": 360865,
+      "linhas_por_tabela": {
+        "infracoes": 360865
+      },
+      "periodos": [
+        "2022-12"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2023_01.csv",
+      "sha256": "98a7e03f4328105a0a1af50395f063c252ae55b1764cabbb9a7918c996f10495",
+      "bytes": 80162189,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142740Z",
+      "linhas_lidas": 309186,
+      "linhas_por_tabela": {
+        "infracoes": 309186
+      },
+      "periodos": [
+        "2023-01"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2023_02.csv",
+      "sha256": "2b8fcd7cc700d54f0557d09b6c56a58972555651ebdffd57ab5b565e5d0ac088",
+      "bytes": 107168448,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142802Z",
+      "linhas_lidas": 413565,
+      "linhas_por_tabela": {
+        "infracoes": 413565
+      },
+      "periodos": [
+        "2023-02"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2023_03.csv",
+      "sha256": "d5c72b0167789ec9e6406f00f8deb9d613a172ffc7b42cd3758c797514a25a46",
+      "bytes": 124453637,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142828Z",
+      "linhas_lidas": 481222,
+      "linhas_por_tabela": {
+        "infracoes": 481222
+      },
+      "periodos": [
+        "2023-03"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2023_04.csv",
+      "sha256": "583a2832cc3dd6db39e12f3c7ea6be9113ff81dd1fa759cbe72777c08ca7aabc",
+      "bytes": 127719845,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142855Z",
+      "linhas_lidas": 492673,
+      "linhas_por_tabela": {
+        "infracoes": 492673
+      },
+      "periodos": [
+        "2023-04"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2023_05.csv",
+      "sha256": "ee15afcc2c90163c926f64a0d6624e2deb9b97ef60b08c4d9d723cb9d7142bad",
+      "bytes": 109860875,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142918Z",
+      "linhas_lidas": 423950,
+      "linhas_por_tabela": {
+        "infracoes": 423950
+      },
+      "periodos": [
+        "2023-05"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2023_06.csv",
+      "sha256": "87bd6f147696dd48f2f8a93f65798afb5c2de9ed733939c281af19c3e67798b7",
+      "bytes": 122201397,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T142943Z",
+      "linhas_lidas": 471335,
+      "linhas_por_tabela": {
+        "infracoes": 471335
+      },
+      "periodos": [
+        "2023-06"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2023_07.csv",
+      "sha256": "5c4cd73b26e5c0f3616c2da9fa6158927349fd93bf092d69b2a906b27408694a",
+      "bytes": 116340376,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143008Z",
+      "linhas_lidas": 448783,
+      "linhas_por_tabela": {
+        "infracoes": 448783
+      },
+      "periodos": [
+        "2023-07"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2023_08.csv",
+      "sha256": "3cd2f74e6e5722322cf8a03125207ddcb25f03481a9a86da47a76dd40e9fbe25",
+      "bytes": 135158209,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143038Z",
+      "linhas_lidas": 522265,
+      "linhas_por_tabela": {
+        "infracoes": 522265
+      },
+      "periodos": [
+        "2023-08"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2023_09.csv",
+      "sha256": "1f16ca5698e472de832011e91aec1c45514fa176cc51070c913e52f041288a39",
+      "bytes": 126102329,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143104Z",
+      "linhas_lidas": 486992,
+      "linhas_por_tabela": {
+        "infracoes": 486992
+      },
+      "periodos": [
+        "2023-09"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2023_10.csv",
+      "sha256": "e33a672677b9788153f34a85952a32ba45720bc7b3565fcdfc2c27a90e071457",
+      "bytes": 146042737,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143134Z",
+      "linhas_lidas": 563907,
+      "linhas_por_tabela": {
+        "infracoes": 563907
+      },
+      "periodos": [
+        "2023-10"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2023_11.csv",
+      "sha256": "1607ec778ee2d4dd87f74696d9d276e4471dc6097eedafbde33cc254afa9f464",
+      "bytes": 150469417,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143204Z",
+      "linhas_lidas": 581401,
+      "linhas_por_tabela": {
+        "infracoes": 581401
+      },
+      "periodos": [
+        "2023-11"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2023_12.csv",
+      "sha256": "69e6949859434a5292a3924933bcbf4652f0955e1e9f206325f86dfa62d13ecc",
+      "bytes": 194458542,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143243Z",
+      "linhas_lidas": 751204,
+      "linhas_por_tabela": {
+        "infracoes": 751204
+      },
+      "periodos": [
+        "2023-12"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2024_01.csv",
+      "sha256": "50e07b9cb6bb6280287a52e5f22bfcfbc870df9118d72ac712ef2339fed175a4",
+      "bytes": 164047406,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143315Z",
+      "linhas_lidas": 632663,
+      "linhas_por_tabela": {
+        "infracoes": 632663
+      },
+      "periodos": [
+        "2024-01"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2024_02.csv",
+      "sha256": "50f62cc8dda6b67beb77c7a1a4f1c70c40e6238b1437aa68fa31707e4d2b4221",
+      "bytes": 146280878,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143343Z",
+      "linhas_lidas": 564176,
+      "linhas_por_tabela": {
+        "infracoes": 564176
+      },
+      "periodos": [
+        "2024-02"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2024_03.csv",
+      "sha256": "2f6490e6b52ed73baa0cdbbdbc01bf1e429a2cfdfecf211f878af3da866c8d6d",
+      "bytes": 169049319,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143416Z",
+      "linhas_lidas": 653288,
+      "linhas_por_tabela": {
+        "infracoes": 653288
+      },
+      "periodos": [
+        "2024-03"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2024_04.csv",
+      "sha256": "787ec36f9eb1c2d84f2d35d8bb9d382189a05de644057e2051e451355c99135d",
+      "bytes": 168198976,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143449Z",
+      "linhas_lidas": 649949,
+      "linhas_por_tabela": {
+        "infracoes": 649949
+      },
+      "periodos": [
+        "2024-04"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2024_05.csv",
+      "sha256": "4c855d921ca8cf69f9a4056edebb2cfc968ead80da20cb68c84461c6dd9aed32",
+      "bytes": 165576840,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143522Z",
+      "linhas_lidas": 639541,
+      "linhas_por_tabela": {
+        "infracoes": 639541
+      },
+      "periodos": [
+        "2024-05"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2024_07.csv",
+      "sha256": "44905561098024cbdcf2ba49a81d4e5b41c1515742018b13887256474217d9a3",
+      "bytes": 216529525,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143603Z",
+      "linhas_lidas": 836554,
+      "linhas_por_tabela": {
+        "infracoes": 836554
+      },
+      "periodos": [
+        "2024-07"
+      ],
+      "tratamentos": {},
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2024_08.csv",
+      "sha256": "0357faaa023295e6089e52f21ef25adc7ffb0b4be3c74b234d730707a7048e86",
+      "bytes": 234859215,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143649Z",
+      "linhas_lidas": 915981,
+      "linhas_por_tabela": {
+        "infracoes": 915981
+      },
+      "periodos": [
+        "2024-08"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 41028
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2024_09.csv",
+      "sha256": "5107803cc9f86d7e9538257d76342f4a60ab4c6c050f3dc0fabdea8fe15ac7cb",
+      "bytes": 245406811,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143737Z",
+      "linhas_lidas": 957494,
+      "linhas_por_tabela": {
+        "infracoes": 957494
+      },
+      "periodos": [
+        "2024-09"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 239424
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2024_10.csv",
+      "sha256": "4a7f1e6838ce0d610f19070be6a803450c2f99009820616e77fbcaf56a0d0f97",
+      "bytes": 229308557,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143821Z",
+      "linhas_lidas": 898349,
+      "linhas_por_tabela": {
+        "infracoes": 898349
+      },
+      "periodos": [
+        "2024-10"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 316742
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2024_11.csv",
+      "sha256": "8a68e0f1768286dbc48cba232cb11925831dfe7640eb9f2aa3699644370945b9",
+      "bytes": 230019036,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143906Z",
+      "linhas_lidas": 902342,
+      "linhas_por_tabela": {
+        "infracoes": 902342
+      },
+      "periodos": [
+        "2024-11"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 364743
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2024_12a.csv",
+      "sha256": "a40e43e7782af2b4555ade5ceb3d226ca162292c89ec31e80a7c586d2628da4a",
+      "bytes": 114084920,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143928Z",
+      "linhas_lidas": 448366,
+      "linhas_por_tabela": {
+        "infracoes": 448366
+      },
+      "periodos": [
+        "2024-12"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 192546
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2024_12b.csv",
+      "sha256": "48dd9b901f6053b5c8b2d4134515c4e46b6b223b89c8e48351cc1249393bf211",
+      "bytes": 155561718,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T143958Z",
+      "linhas_lidas": 611319,
+      "linhas_por_tabela": {
+        "infracoes": 611319
+      },
+      "periodos": [
+        "2024-12"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 288044
+      },
+      "particoes_arquivadas": [
+        "_superseded\\infracoes\\2024-12\\20261116T143958Z-a40e43e7-001.csv.gz",
+        "_superseded\\infracoes\\2024-12\\20261116T143958Z-a40e43e7-002.csv.gz"
+      ]
+    },
+    {
+      "arquivo": "infraçoes2025_01.csv",
+      "sha256": "81c7ca7d67e789161db960820189be758d99593ceb7822b5f0a651f3879fec20",
+      "bytes": 245735769,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T144045Z",
+      "linhas_lidas": 967342,
+      "linhas_por_tabela": {
+        "infracoes": 967342
+      },
+      "periodos": [
+        "2025-01"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 487936
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2025_02.csv",
+      "sha256": "8a1b2dd878828bf80efb55ca46ffa08b2f9d9d25dbcdbc6fb721cd2f6661c9e9",
+      "bytes": 218488813,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T144124Z",
+      "linhas_lidas": 862435,
+      "linhas_por_tabela": {
+        "infracoes": 862435
+      },
+      "periodos": [
+        "2025-02"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 482260
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2025_03.csv",
+      "sha256": "5be30ade7e042a6ffe99ca9d6576adec51bd5abb795fcc0d26195be680411eb3",
+      "bytes": 246633792,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T144208Z",
+      "linhas_lidas": 973481,
+      "linhas_por_tabela": {
+        "infracoes": 973481
+      },
+      "periodos": [
+        "2025-03"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 547304
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2025_04.csv",
+      "sha256": "2bdd1ff97214ee8ab7bd86eb3a45035ec1a29235265f0796be7590cd11f13f5d",
+      "bytes": 235764007,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T144250Z",
+      "linhas_lidas": 930973,
+      "linhas_por_tabela": {
+        "infracoes": 930973
+      },
+      "periodos": [
+        "2025-04"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 526083
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2025_05.csv",
+      "sha256": "8c7f33dd95cdd6ffcfb837468154d7e1e20b61db9d2ae737e14619c429ddb41c",
+      "bytes": 200130144,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T144327Z",
+      "linhas_lidas": 795497,
+      "linhas_por_tabela": {
+        "infracoes": 795497
+      },
+      "periodos": [
+        "2025-05"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 583551
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2025_06.csv",
+      "sha256": "7734ea906aebed4a1a5e710ce149d8bd1d25904ddd7256a33d4610c1669c3bf0",
+      "bytes": 195992694,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T144402Z",
+      "linhas_lidas": 786429,
+      "linhas_por_tabela": {
+        "infracoes": 786429
+      },
+      "periodos": [
+        "2025-06"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 751946
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2025_07.csv",
+      "sha256": "13ed7547df4fdac6f520638e110a1b3fab746f7944025fc7c0d3236a3bfaf87b",
+      "bytes": 211725236,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T144441Z",
+      "linhas_lidas": 851319,
+      "linhas_por_tabela": {
+        "infracoes": 851319
+      },
+      "periodos": [
+        "2025-07"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 846789
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2025_08.csv",
+      "sha256": "9c773684a09a5795461446e93f28e8b1aa8ee05d3e1b55c269bb53f05bb7871d",
+      "bytes": 213848729,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T144520Z",
+      "linhas_lidas": 859619,
+      "linhas_por_tabela": {
+        "infracoes": 859619
+      },
+      "periodos": [
+        "2025-08"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 854831
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2025_09.csv",
+      "sha256": "07604c63810364da1d2bb815ea6b17dd8e759a6c26834c7ed65cfc2de76d2754",
+      "bytes": 208213448,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T144558Z",
+      "linhas_lidas": 837293,
+      "linhas_por_tabela": {
+        "infracoes": 837293
+      },
+      "periodos": [
+        "2025-09"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 833007
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2025_10.csv",
+      "sha256": "68b515830d573088f55a57ea03560341309be6ec31b3a0a03b594c2c0c1264ef",
+      "bytes": 186211064,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T144632Z",
+      "linhas_lidas": 748769,
+      "linhas_por_tabela": {
+        "infracoes": 748769
+      },
+      "periodos": [
+        "2025-10"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 748456
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2025_11.csv",
+      "sha256": "4a8e0d6578d004fd840c60e53978968c5bf38b80cd8c504b6b7f54c7e71ee204",
+      "bytes": 141664982,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T144658Z",
+      "linhas_lidas": 569501,
+      "linhas_por_tabela": {
+        "infracoes": 569501
+      },
+      "periodos": [
+        "2025-11"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 569501
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2025_12.csv",
+      "sha256": "666b5b20279b5fa55ddae0997262ccdb74ea999345dcb7e48eff7c825f66dfdd",
+      "bytes": 253878642,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T144744Z",
+      "linhas_lidas": 1021816,
+      "linhas_por_tabela": {
+        "infracoes": 1021816
+      },
+      "periodos": [
+        "2025-12"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 1021670
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2026_01.csv",
+      "sha256": "74d5e08e6c03d0687d580f27384876a6c2afa5d14326dc41377a48ae95371c74",
+      "bytes": 235093885,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T144828Z",
+      "linhas_lidas": 976833,
+      "linhas_por_tabela": {
+        "infracoes": 976833
+      },
+      "periodos": [
+        "2026-01"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 976833
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2026_02.csv",
+      "sha256": "80e41e86686ca3a257dad942ac043a627e936bc9f621736a3ab292a03bb1311f",
+      "bytes": 218490488,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T144909Z",
+      "linhas_lidas": 906663,
+      "linhas_por_tabela": {
+        "infracoes": 906663
+      },
+      "periodos": [
+        "2026-02"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 906663
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2026_03.csv",
+      "sha256": "d3c069e2ae98d49f68a466536442647d74c4e41deb308fa310e4d8d25fb12749",
+      "bytes": 203652388,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T144947Z",
+      "linhas_lidas": 844162,
+      "linhas_por_tabela": {
+        "infracoes": 844162
+      },
+      "periodos": [
+        "2026-03"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 844161
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2026_04.csv",
+      "sha256": "04294dc16bcead8fb0927e394bbdcb86c0e5cf48a9b9d34e5c8959b3154e0b47",
+      "bytes": 229748345,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T145029Z",
+      "linhas_lidas": 952848,
+      "linhas_por_tabela": {
+        "infracoes": 952848
+      },
+      "periodos": [
+        "2026-04"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 952845
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2026_05.csv",
+      "sha256": "54451be03ad3fc942b427ed86c7a5d9a8a512e9a88f0e92afc2b86cab77d5993",
+      "bytes": 217013551,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T145109Z",
+      "linhas_lidas": 897839,
+      "linhas_por_tabela": {
+        "infracoes": 897839
+      },
+      "periodos": [
+        "2026-05"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 897839
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes2026_06.csv",
+      "sha256": "f8ac7cab85eea621051555abcbd8c091969c57ccee7d72e552c4bc8077824653",
+      "bytes": 190615926,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T145146Z",
+      "linhas_lidas": 787960,
+      "linhas_por_tabela": {
+        "infracoes": 787960
+      },
+      "periodos": [
+        "2026-06"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 787957
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes_2020_11.csv",
+      "sha256": "d6035e4a4761f5954342f927a17cd0084f0d184ec049485ad323704ce2b34cda",
+      "bytes": 93565219,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T145206Z",
+      "linhas_lidas": 451652,
+      "linhas_por_tabela": {
+        "infracoes": 451651
+      },
+      "periodos": [
+        "2020-11"
+      ],
+      "tratamentos": {
+        "descartado:auto_duplicado": 1
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "infraçoes_2020_12.csv",
+      "sha256": "62a571a1acc1f782ee12ff5559dbfc1a38b162394c2cf76877c90432df68c9a5",
+      "bytes": 103827841,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ";",
+      "ingerido_em": "20261116T145227Z",
+      "linhas_lidas": 500302,
+      "linhas_por_tabela": {
+        "infracoes": 500285
+      },
+      "periodos": [
+        "2020-12"
+      ],
+      "tratamentos": {
+        "descartado:auto_duplicado": 17
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "jan.csv",
+      "sha256": "3a24ffd491f80a14e90c7bf9fd09c56b457549b79643e9b2a2c4a90239a5079d",
+      "bytes": 144102834,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T145254Z",
+      "linhas_lidas": 653463,
+      "linhas_por_tabela": {
+        "infracoes": 653463
+      },
+      "periodos": [
+        "2017-01"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 650445,
+        "info:chave_sintetica_do_auto_(layout_antigo)": 653463
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "jul.csv",
+      "sha256": "166df4094338403ca69cf0e8aabbce544f932112954687343db2059fd7fecfab",
+      "bytes": 58156221,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T145305Z",
+      "linhas_lidas": 262448,
+      "linhas_por_tabela": {
+        "infracoes": 262448
+      },
+      "periodos": [
+        "2017-07"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 260853,
+        "info:chave_sintetica_do_auto_(layout_antigo)": 262448
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "jun.csv",
+      "sha256": "5c9b131c25bf57fc5583dd6417d1c679455ef53314fa9e333b59115d278d2275",
+      "bytes": 113115750,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T145326Z",
+      "linhas_lidas": 511404,
+      "linhas_por_tabela": {
+        "infracoes": 511404
+      },
+      "periodos": [
+        "2017-06"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 509055,
+        "info:chave_sintetica_do_auto_(layout_antigo)": 511404
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "mai.csv",
+      "sha256": "7212b9717ed729536b9a9736f0da90c8b4124de82f955561af53806e301fef7a",
+      "bytes": 91158529,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T145343Z",
+      "linhas_lidas": 410848,
+      "linhas_por_tabela": {
+        "infracoes": 410848
+      },
+      "periodos": [
+        "2017-05"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 408737,
+        "info:chave_sintetica_do_auto_(layout_antigo)": 410848
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "mar.csv",
+      "sha256": "af1c8642096e13b7645b7b0f524b62b26e2f1641e89f9edab7837a8bc80193f5",
+      "bytes": 146370941,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T145411Z",
+      "linhas_lidas": 663487,
+      "linhas_por_tabela": {
+        "infracoes": 663487
+      },
+      "periodos": [
+        "2017-03"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 660990,
+        "info:chave_sintetica_do_auto_(layout_antigo)": 663487
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "nov.csv",
+      "sha256": "a6e3454a072417c1e2dfc7d7caa13227bf8493ff68056ee92e8a5d04d766e22e",
+      "bytes": 114953389,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T145433Z",
+      "linhas_lidas": 528097,
+      "linhas_por_tabela": {
+        "infracoes": 528097
+      },
+      "periodos": [
+        "2017-11"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 526870,
+        "info:chave_sintetica_do_auto_(layout_antigo)": 528097
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "out.csv",
+      "sha256": "31683fb3e8238c65cebf3e86f249886ce1c4ae03961e1855e163f8864c3a46e8",
+      "bytes": 131646367,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T145459Z",
+      "linhas_lidas": 606987,
+      "linhas_por_tabela": {
+        "infracoes": 606987
+      },
+      "periodos": [
+        "2017-10"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 605732,
+        "info:chave_sintetica_do_auto_(layout_antigo)": 606987
+      },
+      "particoes_arquivadas": []
+    },
+    {
+      "arquivo": "set.csv",
+      "sha256": "f529578a1145e7b1fc99825ca35e30a42393c061681a8c2811766728140dc56e",
+      "bytes": 61743088,
+      "tipo": "infracoes",
+      "encoding": "cp1252",
+      "separador": ",",
+      "ingerido_em": "20261116T145510Z",
+      "linhas_lidas": 278254,
+      "linhas_por_tabela": {
+        "infracoes": 278254
+      },
+      "periodos": [
+        "2017-09"
+      ],
+      "tratamentos": {
+        "info:assinatura_do_auto_nao_informada": 276928,
+        "info:chave_sintetica_do_auto_(layout_antigo)": 278254
+      },
+      "particoes_arquivadas": []
+    }
+  ]
+}

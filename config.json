@@ -1,0 +1,32 @@
+{
+  "titulo": "Quando, por quê e onde? Acidentes e fiscalização nas rodovias federais brasileiras",
+  "subtitulo": "Uma análise integrada dos dados abertos da Polícia Rodoviária Federal",
+  "autores": [
+    "Dagner Costa Leal",
+    "Kaleo Accacio Pereira Lemos"
+  ],
+  "curso": "Bacharelado em Sistemas de Informação",
+  "periodo_letivo": "6º Período",
+  "disciplina": "Linguagem de Programação — Análise e Visualização de Dados com Python",
+  "instituicao": "UniLaSalle",
+  "semestre": "2026.2",
+  "docente": "Prof. Alexandre Neves Louzada",
+  "github_usuario": "DagLeal",
+  "github_repositorio": "acidentes-infracoes-prf",
+  "palavras_chave": [
+    "acidentes de trânsito",
+    "rodovias federais",
+    "fiscalização",
+    "dados abertos",
+    "análise exploratória",
+    "FAIR"
+  ],
+  "palavras_chave_en": [
+    "traffic accidents",
+    "federal highways",
+    "traffic enforcement",
+    "open data",
+    "exploratory data analysis",
+    "FAIR principles"
+  ]
+}

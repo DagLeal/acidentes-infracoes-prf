@@ -1,0 +1,13 @@
+# dados brutos (grandes; baixe da PRF e coloque em data/raw/)
+data/raw/*
+!data/raw/README.md
+!data/raw/.gitkeep
+# arquivos intermediários do ETL
+data/processed/_staging/
+data/processed/_superseded/
+# python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+.DS_Store

@@ -1,0 +1,32 @@
+tipo,n,f,m,pct_fatais,letalidade
+Colisão traseira,432221,8818,10061,2.04,2.33
+Colisão lateral,216265,4323,5201,2.0,2.4
+Saída de Pista,164984,4910,5822,2.98,3.53
+Colisão Transversal,114384,4069,5074,3.56,4.44
+Saída de leito carroçável,100969,5260,6025,5.21,5.97
+Tombamento,97209,3024,3465,3.11,3.56
+Colisão frontal,85122,23803,33309,27.96,39.13
+Colisão transversal,79330,3636,4180,4.58,5.27
+Capotamento,74393,3003,3503,4.04,4.71
+Colisão com objeto fixo,65897,1438,1639,2.18,2.49
+Queda de motocicleta / bicicleta / veículo,40144,1527,1578,3.8,3.93
+Colisão lateral mesmo sentido,35228,947,1045,2.69,2.97
+Atropelamento de pessoa,30501,8573,8843,28.11,28.99
+Atropelamento de Pedestre,28756,8137,8298,28.3,28.86
+Queda de ocupante de veículo,28268,849,878,3.0,3.11
+Colisão com objeto,25195,1304,1475,5.18,5.85
+Atropelamento de animal,24836,573,611,2.31,2.46
+Colisão com objeto estático,21743,988,1130,4.54,5.2
+Incêndio,17677,34,42,0.19,0.24
+Colisão com bicicleta,11426,1756,1782,15.37,15.6
+Atropelamento de Animal,11335,670,721,5.91,6.36
+Engavetamento,9870,201,304,2.04,3.08
+Colisão com objeto móvel,9860,217,271,2.2,2.75
+Colisão lateral sentido oposto,9771,837,1066,8.57,10.91
+Danos Eventuais,6361,36,47,0.57,0.74
+Derramamento de Carga,5969,15,21,0.25,0.35
+Derramamento de carga,1609,33,49,2.05,3.05
+Colisão com objeto em movimento,1594,83,94,5.21,5.9
+Eventos atípicos,1501,107,116,7.13,7.73
+Danos eventuais,1003,20,22,1.99,2.19
+Sinistro pessoal de trânsito,20,3,3,15.0,15.0

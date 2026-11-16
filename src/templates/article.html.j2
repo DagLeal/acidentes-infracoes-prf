@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ cfg.titulo }} — {{ per }}</title>
+<meta name="description" content="{{ resumo_curto }}">
+<meta name="author" content="{{ cfg.autores|join(', ') }}">
+<meta name="keywords" content="{{ cfg.palavras_chave|join(', ') }}">
+<meta property="og:title" content="{{ cfg.titulo }}">
+<meta property="og:description" content="{{ resumo_curto }}">
+<meta property="og:type" content="article">
+<meta property="og:image" content="assets/figures/mapa_densidade.png">
+<meta name="theme-color" content="#0f1f24">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 90'%3E%3Cpath d='M50 4 L74 46 H26Z' fill='%23d9a520'/%3E%3Cpath d='M26 46 H50 L38 68Z M50 46 H74 L62 68Z' fill='%23f0cf6a' opacity='.0'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{{ jsonld|safe }}</script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<nav class="nav" aria-label="Seções do artigo"><div class="nav-inner">
+  <a class="brand" href="#topo">{{ tri_small|safe }}<span>PRF · Hyrule das Rodovias</span></a>
+  <a class="l" href="#resumo">Resumo</a>
+  <a class="l" href="#introducao">1 Introdução</a>
+  <a class="l" href="#metodologia">2 Metodologia</a>
+  <a class="l" href="#resultados">3 Resultados</a>
+  <a class="l" href="#conclusao">4 Conclusão</a>
+  <a class="l" href="#fair">5 FAIR</a>
+  <a class="l" href="#referencias">6 Referências</a>
+</div></nav>
+
+<header class="hero" id="topo">
+  <div class="hero-inner">
+    {{ tri_big|safe }}
+    <div class="kicker">{{ cfg.disciplina }} · {{ cfg.semestre }}</div>
+    <h1>{{ cfg.titulo }}</h1>
+    <p class="subtitle" style="text-align:center">{{ cfg.subtitulo }} — {{ per }}</p>
+    <div class="authors">{% for a in cfg.autores %}<span class="nm">{{ a }}</span>{% if not loop.last %} · {% endif %}{% endfor %}</div>
+    <div class="affil">{{ cfg.curso }}, {{ cfg.periodo_letivo }} — {{ cfg.instituicao }}{% if cfg.docente %}<br>Docente: {{ cfg.docente }}{% endif %}</div>
+    <div class="badges" aria-label="Metadados">
+      <span class="badge"><b>dados</b> PRF · {{ per }}</span>
+      <span class="badge"><b>python</b> {{ py_version }}</span>
+      <span class="badge"><b>licença</b> MIT (código) · CC BY 4.0 (texto e dados)</span>
+      <span class="badge"><b>FAIR</b> ✔</span>
+      <span class="badge"><b>gerado</b> {{ res.gerado_em }}</span>
+    </div>
+    <a class="btn" href="{{ repo_url }}" rel="noopener">{{ tri_small|safe }} Repositório no GitHub</a>
+  </div>
+  <svg class="land" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 220V150L90 96 170 140 270 70 380 150 470 110 560 160 680 80 790 150 900 100 1010 150 1100 110 1200 160V220Z" fill="#1d3a2a" opacity=".9"/>
+    <path d="M0 220V180Q150 130 300 170T600 165T900 175T1200 150V220Z" fill="#2c5a34"/>
+    <path d="M0 220V200Q200 170 420 195T800 190T1200 185V220Z" fill="#9bc26b" opacity=".85"/>
+    <path d="M0 220V212Q300 196 600 210T1200 206V220Z" fill="#f3e6c4"/>
+  </svg>
+</header>
+
+<main id="main">
+
+<section id="resumo" class="lead-box" style="margin-top:34px">
+  <h2>Resumo</h2>
+  <p>{{ resumo_pt }}</p>
+  <p class="kw"><b>Palavras-chave:</b> {% for k in cfg.palavras_chave %}<span>{{ k }}</span>{% endfor %}</p>
+  <h2 style="margin-top:18px">Abstract</h2>
+  <p class="en">{{ resumo_en }}</p>
+  <p class="kw"><b>Keywords:</b> {% for k in keywords_en %}<span>{{ k }}</span>{% endfor %}</p>
+</section>
+
+<div class="kpis" role="list">
+  <div class="kpi" role="listitem"><span class="ic" aria-hidden="true">🛣️</span><div class="v">{{ k.acidentes|n }}</div><div class="t">acidentes registrados</div></div>
+  <div class="kpi danger" role="listitem"><span class="ic" aria-hidden="true">♥</span><div class="v">{{ k.mortos|n }}</div><div class="t">mortos ({{ k.letalidade|d1 }} por 100 acidentes)</div></div>
+  <div class="kpi" role="listitem"><span class="ic" aria-hidden="true">✚</span><div class="v">{{ k.feridos|n }}</div><div class="t">feridos ({{ k.feridos_graves|n }} graves)</div></div>
+  {% if r3 %}<div class="kpi" role="listitem"><span class="ic" aria-hidden="true">◆</span><div class="v">{{ r3.totais.infracoes|n }}</div><div class="t">infrações autuadas ({{ r3.totais.pct_velocidade|d1 }}% por velocidade)</div></div>{% endif %}
+</div>
+
+<section id="introducao">
+  <h2>1 Introdução</h2>
+  <p>As rodovias federais concentram parte expressiva do transporte brasileiro de cargas e de passageiros e, por isso, também uma parcela relevante das mortes no trânsito. A Polícia Rodoviária Federal (PRF) registra cada ocorrência que atende e publica os microdados como dados abertos (BRASIL, [s.d.]a), o que permite auditar o problema com rigor e reprodutibilidade. A Organização Mundial da Saúde (2023) lembra que as lesões no trânsito seguem entre as principais causas de morte evitável no mundo, e que velocidade, álcool, ausência de equipamentos de proteção e vulnerabilidade dos usuários figuram entre os fatores centrais — hipóteses que os dados da PRF permitem examinar na realidade brasileira.</p>
+  <p>Este trabalho integra <b>quatro bases abertas</b> da PRF — ocorrências, pessoas e veículos envolvidos, todas as causas e tipos registrados em cada acidente e autos de infração — num único pipeline em Python. A pergunta de fundo é se o que se sabe sobre <i>quando</i> e <i>por que</i> as pessoas morrem nas estradas se reflete em <i>onde</i> e <i>como</i> o Estado fiscaliza. Formulamos três perguntas de pesquisa:</p>
+  <div class="rqs">
+    <div class="rq"><b>RQ1 · Quando?</b>Como o número de acidentes e a sua letalidade variam por mês, dia da semana e hora — e acidentes noturnos são mais letais que os diurnos, mesmo controlando o tipo de pista e a área urbana/rural?</div>
+    <div class="rq"><b>RQ2 · Por quê e com quem?</b>Quais causas (principal e concorrentes), tipos de acidente e perfis de envolvidos estão associados a maior gravidade?</div>
+    <div class="rq"><b>RQ3 · Onde e fiscalização?</b>A distribuição da fiscalização (infrações) acompanha a geografia, o horário e o perfil dos acidentes e das mortes?</div>
+  </div>
+</section>
+
+<section id="metodologia">
+  <h2>2 Metodologia e pipeline de dados</h2>
+  <h3>2.1 Fontes e granularidade</h3>
+  <p>Todos os dados vêm dos dados abertos da PRF (acidentes: BRASIL, [s.d.]a; infrações: BRASIL, [s.d.]b) e foram lidos exatamente como fornecidos, em <code>data/raw/</code>. O pipeline identifica o tipo de cada CSV pelo <i>cabeçalho</i>, não pelo nome do arquivo, o que permite incorporar anos adicionais sem alterar código (Seção 5). A Tabela 1 resume o que foi ingerido.</p>
+  <div class="table-wrap"><table>
+    <caption>Tabela 1 — Fontes ingeridas, granularidade e cobertura temporal (gerada a partir do manifesto do ETL).</caption>
+    <thead><tr><th>Base (tipo)</th><th>Granularidade</th><th>Arquivos</th><th class="num">Linhas lidas</th><th>Período</th><th>Tabelas processadas (linhas)</th></tr></thead>
+    <tbody>
+    {% for f in fontes %}<tr><td>{{ f.nome }}</td><td>{{ f.grao }}</td><td>{{ f.arquivos|join(', ') }}</td><td class="num">{{ f.linhas|n }}</td><td>{{ f.periodo }}</td><td>{{ f.tabelas }}</td></tr>{% endfor %}
+    </tbody></table></div>
+  <p>Os arquivos usam codificação CP1252/Latin-1, separador “;”, vírgula decimal e o literal <code>NA</code> para ausentes; o ETL detecta codificação e separador automaticamente. As quatro bases se relacionam pelo identificador da ocorrência (<code>id</code>), exceto as infrações, que só se ligam aos acidentes por <b>local</b> (UF, BR e quilômetro) e <b>tempo</b> (data e hora). Por isso, os cruzamentos da RQ3 usam apenas os meses cobertos pelas duas fontes ({{ r3.periodo_comum if r3 else '—' }}).</p>
+
+  <h3>2.2 Tratamento dos dados</h3>
+  <p>O ETL (<code>src/etl.py</code>) é <b>idempotente</b> (cada CSV é identificado por SHA-256), <b>incremental</b> e <b>rastreável</b>: nenhum valor é corrigido em silêncio — cada regra aplicada é contabilizada em <code>data/processed/manifest.json</code> e listada na Tabela 2. Valores inválidos são <i>anulados</i> (viram nulos), e a linha é preservada, para não introduzir viés de seleção. Partições substituídas por reingestão são arquivadas, nunca apagadas. Os dados tratados são gravados em <code>.csv.gz</code>, particionados por tabela e mês.</p>
+  <div class="table-wrap"><table>
+    <caption>Tabela 2 — Inconsistências detectadas e tratamento aplicado nesta execução.</caption>
+    <thead><tr><th>Tratamento</th><th class="num">Registros afetados</th></tr></thead>
+    <tbody>{% for t in tratamentos %}<tr><td>{{ t.rotulo }}</td><td class="num">{{ t.n|n }}</td></tr>{% endfor %}</tbody></table></div>
+  <p>Três achados merecem destaque. (i) Um identificador de acidente foi corrompido para notação científica (<code>8e+05</code>, isto é, 800000) na origem, o que faria o parser tratar a coluna inteira como decimal; (ii) o arquivo de pessoas usa <code>pesid = 0</code> e <code>idade = 0</code> como <i>sentinelas</i> (veículo sem pessoa registrada; idade ignorada); e (iii) o campo “Indicador Veículo Estrangeiro” das infrações contém hoje o <b>código do país</b> (BR, PY, 99…), divergindo do dicionário de 2016 (S/N), o que o ETL reconcilia. Também derivamos métricas: letalidade (mortos por 100 acidentes), indicador de acidente fatal, grupo de veículo, grupo temático de infração (pelo artigo do CTB) e o limite de velocidade implícito (velocidade considerada menos excesso verificado).</p>
+
+  <div class="cap">src/etl.py</div>
+<pre><code>{{ code_to_num|safe }}
+
+{{ code_parse_dates|safe }}</code></pre>
+  <div class="cap">src/etl.py</div>
+<pre><code>{{ code_detect_kind|safe }}</code></pre>
+
+  <h3>2.3 Métodos estatísticos</h3>
+  <p>Proporções vêm com intervalos de Wilson (1927) a 95%. Associações entre gravidade e fatores binários são medidas por <i>odds ratio</i> (OR) com IC 95% de Woolf e teste qui-quadrado (AGRESTI, 2013); para a comparação noite × dia, também reportamos o OR de Mantel-Haenszel estratificado por tipo de pista e área urbana/rural, com variância de Robins, Breslow e Greenland (1986). Associações entre contagens (UF, BR, trecho de 10 km, hora) usam a correlação de postos de Spearman, robusta a assimetrias e outliers (VIRTANEN et al., 2020). Em todo o texto, “fatal” significa acidente com ao menos um morto e “letalidade” é mortos por 100 acidentes. As análises usam pandas (MCKINNEY, 2010), NumPy (HARRIS et al., 2020) e SciPy; as figuras estáticas, Matplotlib (HUNTER, 2007), e as interativas, D3 (BOSTOCK; OGIEVETSKY; HEER, 2011).</p>
+</section>
+
+<section id="resultados">
+  <h2>3 Resultados e discussão</h2>
+
+  <h3>3.1 RQ1 — Quando acontecem os acidentes e as mortes?</h3>
+  <p>No período {{ per }}, a PRF registrou {{ k.acidentes|n }} acidentes (média de {{ k.media_dia|d1 }} por dia), com {{ k.mortos|n }} mortos e {{ k.feridos|n }} feridos; {{ k.pct_fatais|d1 }}% dos acidentes foram fatais. {% if f.mes_pico %}O mês com mais acidentes completos foi {{ f.mes_pico.nome }} ({{ f.mes_pico.acidentes|n }}) e o de menor movimento, {{ f.mes_min.nome }} ({{ f.mes_min.acidentes|n }}).{% endif %}{% if f.tem_parcial %} O último mês disponível tem dados parciais e está marcado no gráfico.{% endif %}</p>
+  <figure class="fig"><div class="fig-title">Figura 1 — Evolução mensal</div><div class="chart" id="c-monthly"></div>
+    <figcaption><b>Figura 1.</b> Acidentes, mortos e letalidade por mês. Passe o cursor sobre os pontos para ver os valores.{% if r1.anos|length > 1 %} Use “Comparar anos” para sobrepor os anos.{% endif %}</figcaption></figure>
+
+  <p>O padrão semanal e horário (Figura 2) mostra que o <b>volume</b> de acidentes se concentra no fim da tarde — o pico é às {{ r1.hora_mais_acidentes.h|hh }} ({{ r1.hora_mais_acidentes.n|n }} acidentes) —, enquanto a <b>gravidade</b> se concentra na madrugada: a maior proporção de acidentes fatais ocorre às {{ r1.hora_mais_letal.h|hh }} ({{ r1.hora_mais_letal.pct_fatais|d1 }}%, IC 95% {{ r1.hora_mais_letal.lo|d1 }}–{{ r1.hora_mais_letal.hi|d1 }}%, entre horas com ao menos 200 acidentes). Fins de semana têm mais acidentes por dia ({{ r1.fds_vs_util.media_diaria_fds|d1 }} contra {{ r1.fds_vs_util.media_diaria_util|d1 }} em dias úteis) e maior proporção de fatais ({{ r1.fds_vs_util.fds_pct_fatais|d1 }}% contra {{ r1.fds_vs_util.util_pct_fatais|d1 }}%; OR = {{ r1.fds_vs_util|ci }}; {{ r1.fds_vs_util.p|p_fmt }}).</p>
+  <figure class="fig"><div class="fig-title">Figura 2 — Dia da semana × hora</div><div class="chart" id="c-heat"></div>
+    <figcaption><b>Figura 2.</b> Mapa de calor por dia da semana e hora. Alterne entre volume de acidentes e % de acidentes fatais (células com menos de 20 acidentes são omitidas na segunda visão).</figcaption></figure>
+
+  {% set nd = r1.noite_vs_dia %}
+  <p>A Figura 3 compara a letalidade entre as fases do dia; a maior proporção de acidentes fatais está no <b>{{ f.fase_max.fase|lower }}</b> ({{ f.fase_max.pct_fatais|d1 }}%). Acidentes em <b>plena noite</b> foram fatais em {{ f.fase['Plena Noite'].pct_fatais|d1 }}% dos casos, contra {{ f.fase['Pleno dia'].pct_fatais|d1 }}% em pleno dia. A chance de um acidente noturno ser fatal é <b>{{ nd.or|d2 }}×</b> a de um acidente diurno (<span class="stat">OR = {{ nd|ci }}</span>; {{ nd.p|p_fmt }}). A associação <b>persiste após estratificar</b> por tipo de pista e área urbana/rural (<span class="stat">OR<sub>MH</sub> = {{ nd.ajustado_mh|ci }}</span>), o que reduz — mas não elimina — a hipótese de que a noite apenas reflita estradas mais perigosas.</p>
+  <figure class="fig"><div class="fig-title">Figura 3 — Letalidade por fase do dia e por hora</div><div class="chart" id="c-fase"></div>
+    <figcaption><b>Figura 3.</b> Percentual de acidentes com morte, com intervalo de confiança de 95% (Wilson).</figcaption></figure>
+  <div class="callout"><p><b>Resposta à RQ1.</b> O volume de acidentes é diurno e vespertino; a gravidade é noturna e de madrugada. Acidentes de plena noite têm cerca de {{ nd.or|d1 }}× a chance de serem fatais ({{ nd.ajustado_mh.or|d1 }}× após ajuste), e fins de semana têm {{ r1.fds_vs_util.or|d2 }}× a chance dos dias úteis.</p></div>
+  <p><b>Discussão.</b> Esse descompasso entre frequência e gravidade é coerente com mecanismos amplamente discutidos na literatura de segurança viária: menor visibilidade, sonolência e fadiga, tráfego menos denso que favorece velocidades mais altas e maior prevalência de álcool à noite e aos fins de semana. Os dados da PRF, porém, não medem exposição (veículos-quilômetro por hora), de modo que a análise descreve a <i>gravidade condicional à ocorrência</i>, não o risco por viagem; é possível que haja menos acidentes à noite simplesmente porque circulam menos veículos.</p>
+
+  <h3>3.2 RQ2 — Quais causas, tipos e perfis estão associados à gravidade?</h3>
+  {% set mc = r2.multi_causa %}
+  <p>O arquivo <i>datatran</i> traz uma única causa por acidente; o arquivo “todas as causas e tipos” revela que {{ mc.pct_mais_de_uma|d1 }}% dos acidentes têm mais de uma causa registrada (média de {{ mc.media|d2 }}). A Figura 4 contrapõe as causas citadas em qualquer posição com as que foram eleitas causa principal. As mais citadas foram {{ f.causas_top3|join('; ')|lower }}.</p>
+  <figure class="fig"><div class="fig-title">Figura 4 — Causas dos acidentes</div><div class="chart" id="c-causas"></div>
+    <figcaption><b>Figura 4.</b> Causas mais frequentes: citadas (principal + concorrente), apenas principais, e % de acidentes fatais entre os que citam cada causa.</figcaption></figure>
+  <p>Em letalidade, porém, o ranking muda: entre as causas com ao menos {{ r2.min_n }} acidentes, as mais associadas a mortes são {% for c in r2.causas_letais[:3] %}“{{ c.causa|lower }}” ({{ c.pct_fatais|d1 }}% fatais, n = {{ c.n|n }}){% if not loop.last %}{% if loop.index == 2 %} e {% else %}, {% endif %}{% endif %}{% endfor %}. A gravidade também cresce com o número de causas registradas: {% for x in mc.faixas %}{{ x.pct_fatais|d1 }}% de fatais com {{ x.k }} causa{{ 's' if x.k != '1' else '' }}{% if not loop.last %}, {% endif %}{% endfor %} (OR de “mais de uma causa” = {{ mc.or_mais_de_uma|ci }}). Essa relação deve ser lida com cautela: acidentes graves são investigados mais a fundo e tendem a registrar mais causas (viés de detecção), de modo que a multiplicidade pode ser parte consequência, parte sinal de gravidade.</p>
+  {% if r2.pares_causas %}<p>Entre as combinações mais comuns, a causa principal “{{ r2.pares_causas[0].principal|lower }}” vem acompanhada de “{{ r2.pares_causas[0].concorrente|lower }}” em {{ r2.pares_causas[0].n|n }} acidentes.</p>{% endif %}
+
+  <p>Quanto ao <b>tipo</b>, “{{ f.tipo_top.tipo|lower }}” é o mais frequente ({{ f.tipo_top.n|n }} acidentes, {{ f.tipo_top.pct_fatais|d1 }}% fatais), mas o mais letal entre os tipos com volume relevante é “{{ f.tipo_letal.tipo|lower }}” ({{ f.tipo_letal.pct_fatais|d1 }}% fatais, {{ f.tipo_letal.m|n }} mortos). {% if r2.multi_tipo %}Além disso, {{ r2.multi_tipo.pct_encadeados|d1 }}% dos acidentes envolvem mais de um tipo em sequência (por exemplo, uma colisão seguida de capotamento); os encadeados são fatais em {{ r2.multi_tipo.pct_fatais_encadeados|d1 }}% dos casos, contra {{ r2.multi_tipo.pct_fatais_simples|d1 }}% dos de tipo único.{% endif %}</p>
+  <figure class="fig"><div class="fig-title">Figura 5 — Tipos de acidente: frequência × letalidade</div><div class="chart" id="c-tipos"></div>
+    <figcaption><b>Figura 5.</b> Cada círculo é um tipo de acidente; a área é proporcional ao número de mortos. Tipos frequentes e pouco letais ficam à direita e embaixo; tipos raros e muito letais, no alto.</figcaption></figure>
+
+  <p>O <b>perfil do envolvido</b> é o fator mais discriminante (Figura 6). Entre {{ r2.perfis_total.n|n }} envolvidos com estado físico informado, {{ f.perfil['Pedestres'].pct_obito|d1 }}% dos pedestres morreram — {{ f.ratio_ped_auto|d1 }} vezes a taxa dos ocupantes de automóveis ({{ f.perfil['Automóvel e utilitários'].pct_obito|d1 }}%) — embora representem apenas {{ f.perfil['Pedestres'].share_envolvidos|d1 }}% dos envolvidos e {{ f.perfil['Pedestres'].share_obitos|d1 }}% dos óbitos. Motociclistas somam {{ f.perfil['Motocicletas'].share_envolvidos|d1 }}% dos envolvidos e {{ f.perfil['Motocicletas'].share_obitos|d1 }}% dos óbitos, com chance de óbito {{ r2.moto_vs_auto.or|d1 }}× a de ocupantes de automóveis (OR = {{ r2.moto_vs_auto|ci }}).</p>
+  <figure class="fig"><div class="fig-title">Figura 6 — Perfil dos envolvidos</div><div class="chart" id="c-perfis"></div>
+    <figcaption><b>Figura 6.</b> Letalidade por perfil (com IC 95%) e comparação entre participação nos envolvidos e nos óbitos.</figcaption></figure>
+  <p>Entre os óbitos, {{ r2.sexo.pct_homens_obitos|d1 }}% são de homens, que representam {{ r2.sexo.pct_homens_envolvidos|d1 }}% dos envolvidos com sexo informado; a idade mediana dos óbitos é {{ r2.sexo.mediana_idade_obitos|d1 }} anos, com concentração em idades produtivas (Figura 7).</p>
+  <figure class="fig"><div class="fig-title">Figura 7 — Óbitos por sexo e faixa etária</div><div class="chart" id="c-piramide"></div>
+    <figcaption><b>Figura 7.</b> Número de óbitos por faixa etária e sexo ({{ r2.sexo.n_obitos_com_sexo_idade|n }} óbitos com sexo e idade informados). Sem população de referência, os valores são contagens, não taxas.</figcaption></figure>
+  <div class="callout"><p><b>Resposta à RQ2.</b> A <i>frequência</i> é dominada por falhas de atenção e reação do condutor e por colisões traseiras; a <i>gravidade</i> está ligada a eventos que expõem usuários vulneráveis (atropelamentos, contramão, queda de motocicleta) e a acidentes encadeados ou multicausais. Pedestres e motociclistas formam o grupo de maior risco de óbito, e homens em idade produtiva, o de maior número absoluto.</p></div>
+  <p><b>Discussão.</b> A divergência entre as causas mais <i>comuns</i> e as mais <i>letais</i> tem implicação prática: campanhas focadas em frequência (distância de segurança, atenção) e intervenções focadas em gravidade (separação de pedestres, travessias, proteção a motociclistas) atuam em frentes diferentes. As causas são atribuídas pelo agente no atendimento, e termos como “ausência de reação do condutor” são categorias residuais, que podem esconder sono, distração ou mal súbito.</p>
+
+  <h3>3.3 RQ3 — A fiscalização acompanha os acidentes?</h3>
+  {% if r3 and not r3.sem_sobreposicao %}
+  <p>As infrações cobrem {{ r3.periodo_infracoes }}: foram {{ r3.totais.infracoes|n }} autos, dos quais {{ r3.totais.pct_velocidade|d1 }}% por excesso de velocidade e {{ r3.totais.pct_sem_abordagem|d1 }}% sem abordagem do condutor — perfil típico de fiscalização eletrônica. O excesso médio verificado foi de {{ r3.excesso.media|d1 }} km/h (mediana {{ r3.excesso.mediana|n }}; percentil 90 = {{ r3.excesso.p90|n }}), e {{ r3.excesso.pct_acima_30|d1 }}% dos autos de velocidade superam 30 km/h acima do limite. Os limites mais autuados são {% for l in r3.limites[:3] %}{{ l.limite }} km/h ({{ l.pct|d1 }}%){% if not loop.last %}{% if loop.index == 2 %} e {% else %}, {% endif %}{% endif %}{% endfor %}. Como acidentes e infrações só coincidem em {{ r3.periodo_comum }}, as comparações a seguir usam esse recorte: {{ r3.acidentes_periodo_comum.acidentes|n }} acidentes, {{ r3.acidentes_periodo_comum.mortos|n }} mortos e {{ r3.acidentes_periodo_comum.infracoes|n }} infrações ({{ r3.infracoes_por_acidente|d1 }} infrações por acidente).</p>
+  <figure class="fig"><div class="fig-title">Figura 8 — O que se autua</div><div class="chart" id="c-grupos"></div>
+    <figcaption><b>Figura 8.</b> Infrações por grupo temático (definido pelo artigo do CTB).</figcaption></figure>
+  <figure class="fig"><div class="fig-title">Figura 9 — Excesso de velocidade</div><div class="chart" id="c-excesso"></div>
+    <figcaption><b>Figura 9.</b> Distribuição do excesso verificado nas infrações de velocidade, em faixas de 5 km/h.</figcaption></figure>
+
+  <p><b>Onde.</b> Entre as UFs, o volume de infrações acompanha de perto o de acidentes (ρ de Spearman = {{ r3.corr_uf_acidentes.rho|d2 }}, n = {{ r3.corr_uf_acidentes.n }}, {{ r3.corr_uf_acidentes.p|p_fmt }}); com mortos, ρ = {{ r3.corr_uf_mortos.rho|d2 }}. No ajuste log-log, a inclinação é {{ r3.fit_uf.slope|d2 }} (R² = {{ r3.fit_uf.r2|d2 }}): dobrar os acidentes de uma UF está associado a cerca de {{ (2 ** r3.fit_uf.slope)|d1 }}× mais infrações, isto é, uma relação aproximadamente proporcional. Por rodovia, a associação permanece forte (ρ = {{ r3.corr_br.rho|d2 }}, n = {{ r3.br_n_corr }} BRs com ao menos 30 acidentes) e, por trecho de 10 km, é moderada (ρ = {{ r3.corr_trecho.rho|d2 }}, n = {{ r3.n_trechos_corr|n }} trechos com ao menos 3 acidentes). Dos 100 trechos com mais acidentes, {{ r3.overlap_top100 }} também estão entre os 100 mais autuados. A intensidade relativa varia muito: {{ f.uf_mais.uf }} tem {{ f.uf_mais.inf_por_100_acid|n }} infrações por 100 acidentes (com apenas {{ f.uf_mais.acidentes|n }} acidentes no período) e {{ f.uf_menos.uf }}, {{ f.uf_menos.inf_por_100_acid|n }} ({{ f.uf_menos.acidentes|n }} acidentes).</p>
+  <figure class="fig"><div class="fig-title">Figura 10 — UFs: acidentes × infrações</div><div class="chart" id="c-uf"></div>
+    <figcaption><b>Figura 10.</b> Cada ponto é uma UF no período comum; escalas logarítmicas. A reta tracejada é o ajuste log-log.</figcaption></figure>
+  <figure class="fig"><img src="assets/figures/mapa_densidade.png" alt="Mapa de calor da localização dos acidentes nas rodovias federais, com os acidentes fatais sobrepostos" width="1640" height="1720" loading="lazy">
+    <figcaption><b>Figura 11.</b> Densidade de acidentes (hexágonos, escala log) e acidentes fatais (pontos escuros), em todo o período. A malha rodoviária federal emerge dos próprios dados. <a href="assets/figures/mapa_densidade.png">Baixar em alta resolução</a>.</figcaption></figure>
+  <figure class="fig"><img src="assets/figures/trechos_acidentes_infracoes.png" alt="Gráfico de densidade de acidentes e infrações por trecho de 10 quilômetros, em escala logarítmica" width="1480" height="1120" loading="lazy">
+    <figcaption><b>Figura 12.</b> Acidentes e infrações por trecho de 10 km de cada BR (período comum). <a href="assets/figures/trechos_acidentes_infracoes.png">Baixar em alta resolução</a>.</figcaption></figure>
+
+  <p><b>Quando.</b> A fiscalização é predominantemente diurna: só {{ r3.pct_infracoes_noite|d1 }}% das infrações ocorrem entre 18h e 6h, enquanto essa janela concentra {{ r3.pct_acidentes_noite|d1 }}% dos acidentes e {{ r3.pct_fatais_noite|d1 }}% dos acidentes fatais (Figura 13). O perfil horário das infrações acompanha o dos acidentes em geral (ρ = {{ r3.corr_hora_acid.rho|d2 }}), mas não o dos acidentes fatais (ρ = {{ r3.corr_hora_fatais.rho|d2 }}, {{ r3.corr_hora_fatais.p|p_fmt }}). Diariamente, infrações e acidentes também caminham juntos (ρ = {{ r3.corr_diaria.rho|d2 }}, n = {{ r3.dias_comuns }} dias).</p>
+  <figure class="fig"><div class="fig-title">Figura 13 — Perfil horário</div><div class="chart" id="c-horario"></div>
+    <figcaption><b>Figura 13.</b> Distribuição percentual de acidentes, acidentes fatais e infrações ao longo do dia. Clique nos botões para ligar ou desligar séries.</figcaption></figure>
+
+  {% if r3.veiculos %}<p><b>Com quem.</b> Há também descompasso por tipo de veículo (Figura 14): {% for v in r3.veiculos if v.grupo in ['Motocicletas','Automóvel e utilitários'] %}{{ v.grupo|lower }} respondem por {{ v.share_infr|d1 }}% das infrações e {{ v.share_acid|d1 }}% dos veículos em acidentes (razão {{ v.razao|d2 }}×){% if not loop.last %}; {% endif %}{% endfor %}. Esse resultado não prova que motocicletas sejam “menos fiscalizadas”: radares fotografam placas de modos diferentes e o campo “sem abordagem” sugere fiscalização majoritariamente eletrônica; a explicação é uma hipótese que estes dados não testam.</p>
+  <figure class="fig"><div class="fig-title">Figura 14 — Representação por tipo de veículo</div><div class="chart" id="c-veiculos"></div>
+    <figcaption><b>Figura 14.</b> Razão entre a participação do grupo nas infrações e nos veículos envolvidos em acidentes (período comum). Valores abaixo de 1× indicam subrepresentação nas infrações.</figcaption></figure>{% endif %}
+
+  <div class="table-wrap"><table>
+    <caption>Tabela 3 — As {{ r3.br_top|length }} BRs com mais acidentes no período comum.</caption>
+    <thead><tr><th>BR</th><th class="num">Acidentes</th><th class="num">Mortos</th><th class="num">Infrações</th><th class="num">Infrações por 100 acidentes</th></tr></thead>
+    <tbody>{% for b in r3.br_top %}<tr><td>BR-{{ b.br }}</td><td class="num">{{ b.acidentes|n }}</td><td class="num">{{ b.mortos|n }}</td><td class="num">{{ b.infracoes|n }}</td><td class="num">{{ b.inf_por_100_acid|n }}</td></tr>{% endfor %}</tbody></table></div>
+  <div class="callout"><p><b>Resposta à RQ3.</b> A fiscalização acompanha a <i>escala</i> dos acidentes (UF, rodovia, dia e hora de maior movimento), mas não a sua <i>gravidade</i>: as infrações concentram-se de dia, em velocidade e em automóveis, enquanto as mortes se concentram à noite e entre usuários vulneráveis.</p></div>
+  <p><b>Discussão.</b> A forte correlação por UF é, em boa medida, um efeito de escala: estados com mais tráfego, mais quilômetros de rodovia e mais efetivo geram simultaneamente mais acidentes e mais autos. Por isso, o dado informativo não é a correlação, e sim os <i>desvios</i> dela — como a baixa presença noturna — que sugerem onde a política de fiscalização poderia ser reponderada para a gravidade e não apenas para o volume. A direção causal é ambígua: a fiscalização pode ser instalada onde há acidentes e, ao mesmo tempo, reduzi-los.</p>
+  {% else %}
+  <p class="warn">Não há meses em comum entre as bases de acidentes e de infrações; adicione CSVs de infrações do mesmo período em <code>data/raw/</code> para habilitar esta seção.</p>
+  {% endif %}
+</section>
+
+<section id="conclusao">
+  <h2>4 Conclusão</h2>
+  <p><b>Síntese.</b> Integrando quatro bases abertas da PRF, mostramos que (RQ1) a gravidade dos acidentes segue um calendário diferente do volume — noite, madrugada e fins de semana são desproporcionalmente letais, mesmo após ajuste por tipo de pista e área urbana/rural; (RQ2) as causas mais frequentes não são as mais letais, e pedestres e motociclistas concentram o risco de óbito; e (RQ3) a fiscalização acompanha o volume de acidentes por local e dia, mas é predominantemente diurna, de velocidade e voltada a automóveis, ao passo que as mortes se concentram à noite e entre usuários vulneráveis.</p>
+  <p><b>Limitações.</b> (i) Os dados descrevem a rede federal e não permitem inferir sobre estradas estaduais e municipais; (ii) não há medida de exposição (tráfego, população, extensão), por isso comparamos proporções <i>condicionais à ocorrência</i> e não riscos por viagem; (iii) as infrações cobrem {{ r3.periodo_infracoes if r3 else 'um período distinto' }}, o que limita a RQ3 ao período comum; (iv) correlações ecológicas entre UFs não valem para indivíduos e não são causais; (v) causas e classificações dependem do registro do agente e o campo “idade” contém sentinelas; e (vi) óbitos posteriores ao atendimento podem não ser capturados pela PRF.</p>
+  <p><b>Trabalhos futuros.</b> Incorporar outros anos (o pipeline já aceita novos CSVs em <code>data/raw/</code>), o que permitiria comparar sazonalidade e tendência; acrescentar denominadores de exposição (volume de tráfego do DNIT, frota, população); modelar a probabilidade de acidente fatal com regressão logística multivariada; analisar espacialmente trechos críticos; e avaliar quase-experimentalmente o efeito da instalação de radares.</p>
+</section>
+
+<section id="fair">
+  <h2>5 Disponibilidade dos dados e declaração FAIR</h2>
+  <p>Este projeto adere aos princípios FAIR (WILKINSON et al., 2016). Os dados brutos pertencem à PRF e estão disponíveis na fonte original; os dados tratados, o código, a análise e este artigo estão no repositório.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Princípio</th><th>Como é atendido</th></tr></thead>
+    <tbody>
+      <tr><td><b>Findable</b></td><td><code>README.md</code> com resumo, palavras-chave e links para as fontes originais; autoria, disciplina, semestre e instituição no cabeçalho deste artigo; metadados estruturados (JSON-LD) na página.</td></tr>
+      <tr><td><b>Accessible</b></td><td>Repositório público; scripts sem credenciais; artigo servido pelo GitHub Pages, leve (D3 local, imagens sob demanda) e responsivo.</td></tr>
+      <tr><td><b>Interoperable</b></td><td><code>data/data_dictionary.md</code> gerado a partir do esquema do código (variável, tipo, formato, significado e origem); dados tratados em <code>.csv.gz</code> (UTF-8, ISO 8601), particionados por tabela e mês; resultados em <code>docs/assets/data/results.json</code>.</td></tr>
+      <tr><td><b>Reusable</b></td><td>Licença MIT (código) e CC BY 4.0 (texto e dados derivados); <code>requirements.txt</code> com versões congeladas; manifesto SHA-256 do que foi ingerido; testes automatizados do ETL.</td></tr>
+    </tbody></table></div>
+  <h3>Reproduzindo o pipeline</h3>
+<pre><code><span class="c"># 1) clonar e preparar o ambiente (Python {{ py_version }})</span>
+git clone {{ repo_url }}.git
+cd {{ cfg.github_repositorio }}
+python -m venv .venv &amp;&amp; source .venv/bin/activate     <span class="c"># Windows: .venv\Scripts\activate</span>
+pip install -r requirements.txt
+
+<span class="c"># 2) colocar os CSVs da PRF em data/raw/ (qualquer ano; o tipo é detectado pelo cabeçalho)</span>
+
+<span class="c"># 3) ETL + análise + geração do artigo (docs/index.html)</span>
+python -m src.pipeline
+
+<span class="c"># opcional: reprocessar tudo do zero / executar os testes</span>
+python -m src.pipeline --rebuild
+python -m unittest discover -s tests</code></pre>
+  <p>Para <b>acrescentar dados</b> (por exemplo, outro ano), basta copiar os novos CSVs para <code>data/raw/</code> e executar <code>python -m src.pipeline</code>: arquivos já ingeridos são ignorados, meses reenviados substituem os anteriores (que ficam arquivados) e todos os números, gráficos e textos deste artigo são recalculados.</p>
+</section>
+
+<section id="referencias">
+  <h2>6 Referências</h2>
+  <ol class="refs">
+    {% for r in refs %}<li>{{ r|safe }}</li>{% endfor %}
+  </ol>
+</section>
+</main>
+
+<footer>
+  {{ tri_small|safe }}
+  <p style="text-align:center;margin:8px 0">{{ cfg.autores|join(' · ') }} — {{ cfg.curso }}, {{ cfg.instituicao }} ({{ cfg.semestre }})</p>
+  <p style="text-align:center;margin:4px 0">Código sob licença MIT · texto e dados derivados sob CC BY 4.0 · dados originais: PRF (dados abertos) · <a href="{{ repo_url }}">repositório</a></p>
+  <p style="text-align:center;margin:4px 0;opacity:.75;font-size:.85rem">Tema visual inspirado em Hyrule; projeto acadêmico sem qualquer vínculo com a Nintendo. Gerado em {{ res.gerado_em }}.</p>
+</footer>
+
+<script>window.DATA = {{ data_json|safe }};</script>
+<script src="assets/vendor/d3.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

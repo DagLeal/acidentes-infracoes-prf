@@ -1,0 +1,25 @@
+perfil,faixa_veic,n,obitos,pct_obito
+Automóvel e utilitários,0–5,752639,2584,0.343
+Automóvel e utilitários,6–10,357118,2952,0.827
+Automóvel e utilitários,11–15,237390,2863,1.206
+Automóvel e utilitários,16+,225622,3853,1.708
+Bicicletas,0–5,137,2,1.46
+Bicicletas,6–10,55,3,5.455
+Bicicletas,11–15,33,0,0.0
+Bicicletas,16+,72,3,4.167
+Caminhões e reboques,0–5,258632,1187,0.459
+Caminhões e reboques,6–10,132947,1142,0.859
+Caminhões e reboques,11–15,83484,1099,1.316
+Caminhões e reboques,16+,129397,1195,0.924
+Motocicletas,0–5,125563,4022,3.203
+Motocicletas,6–10,79105,3744,4.733
+Motocicletas,11–15,59070,3489,5.907
+Motocicletas,16+,35834,2898,8.087
+Outros,0–5,79,0,0.0
+Outros,6–10,19,0,0.0
+Outros,11–15,17,0,0.0
+Outros,16+,72,1,1.389
+Ônibus,0–5,41985,55,0.131
+Ônibus,6–10,21687,50,0.231
+Ônibus,11–15,12662,43,0.34
+Ônibus,16+,9867,50,0.507
